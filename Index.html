@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cogvivo — Elite Combat Pro · 41 ingrediënten. 14 mechanismen. Eén systeem.</title>
-<meta name="description" content="Cogvivo — 41 klinisch gedoseerde ingrediënten over 14 neurobiologische mechanismen. Volledig EU-conform. Radicale formuletransparantie.">
+<title>Cogvivo — 35 ingrediënten. 14 mechanismen. Eén systeem.</title>
+<meta name="description" content="Cogvivo — 35 klinisch gedoseerde ingrediënten over 14 neurobiologische mechanismen. Volledig EU-conform. Radicale formuletransparantie.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.cogvivo.com/">
-<meta property="og:title" content="Cogvivo — Elite Combat Pro · 41 ingrediënten. 14 mechanismen. Eén systeem.">
-<meta property="og:description" content="41 klinisch gedoseerde ingrediënten. Volledige formuletransparantie. EU-conform.">
+<meta property="og:title" content="Cogvivo — 35 ingrediënten. 14 mechanismen. Eén systeem.">
+<meta property="og:description" content="35 klinisch gedoseerde ingrediënten. Volledige formuletransparantie. EU-conform.">
 <meta property="og:type" content="product">
 <meta property="og:locale" content="nl_NL">
 
@@ -25,9 +25,9 @@ html{scroll-behavior:smooth;}
   --mid:#090d1a;
   --panel:#0d1222;
   --t1:#eceae3;
-  --t2:#b4c4d4;
-  --t3:#aebfcc;
-  --t4:#a7b9c5;
+  --t2:#c9d6e2;
+  --t3:#b9c8d6;
+  --t4:#96a7b5;
   --gold:#c8a44a;
   --goldhi:#e0c06e;
   --teal:#1aa28a;
@@ -39,12 +39,13 @@ body{
   color:var(--t1);
   font-family:'DM Mono',monospace;
   overflow-x:hidden;
-  cursor:none;
 }
 
 /* CURSOR */
-#CUR{position:fixed;width:5px;height:5px;background:var(--tealhi);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .15s,height .15s;}
-#CURR{position:fixed;width:30px;height:30px;border:1px solid rgba(26,162,138,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
+#CUR{position:fixed;width:6px;height:6px;background:var(--tealhi);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .15s,height .15s;display:none;}
+@media (hover:hover) and (pointer:fine){#CUR{display:block;}}
+#CURR{position:fixed;width:30px;height:30px;border:1px solid rgba(26,162,138,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);display:none;}
+@media (hover:hover) and (pointer:fine){#CURR{display:block;}}
 body.hl #CUR{width:42px;height:42px;background:transparent;border:1px solid var(--tealhi);border-radius:50%;}
 body.hl #CURR{opacity:0;}
 
@@ -63,7 +64,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--t1);}
 .nav-brand em{font-style:normal;color:var(--tealhi);}
 .nav-links{display:flex;gap:28px;list-style:none;margin-left:auto;}
-.nav-links a{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#aec0ca;text-decoration:none;transition:color .3s;}
+.nav-links a{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#7a9aaa;text-decoration:none;transition:color .3s;}
 .nav-links a:hover{color:var(--tealhi);}
 .nav-cta{margin-left:24px;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.2em;color:var(--black);background:var(--tealhi);padding:9px 24px;text-decoration:none;
   clip-path:polygon(8px 0%,100% 0%,100% calc(100% - 8px),calc(100% - 8px) 100%,0% 100%,0% 8px);
@@ -108,7 +109,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 
 /* VERLIES BANNER */
 .loss-banner{background:rgba(6,10,18,1);border-top:1px solid rgba(140,32,32,.18);border-bottom:1px solid rgba(140,32,32,.18);padding:28px 60px;text-align:center;}
-.loss-banner p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,26px);font-weight:400;font-style:italic;color:rgba(226,210,192,.86);letter-spacing:.05em;}
+.loss-banner p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,26px);font-weight:400;font-style:italic;color:rgba(220,200,180,.55);letter-spacing:.05em;}
 .loss-banner strong{color:var(--t1);font-style:normal;font-weight:600;}
 
 /* TRUST STRIP */
@@ -116,7 +117,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ts{padding:28px 44px;display:flex;flex-direction:column;align-items:center;gap:8px;border-right:1px solid rgba(255,255,255,.04);}
 .ts:last-child{border-right:none;}
 .ts-val{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;line-height:1;}
-.ts-lbl{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--t4);text-align:center;}
+.ts-lbl{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--t4);text-align:center;}
 .c-t{color:var(--tealhi);}
 .c-g{color:var(--goldhi);}
 .c-w{color:var(--t1);}
@@ -126,13 +127,13 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ticker-inner{display:inline-flex;gap:48px;animation:tick 38s linear infinite;}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ti{font-size:8px;letter-spacing:.28em;text-transform:uppercase;}
-.ti.r{color:rgba(26,162,138,.62);}
-.ti.g{color:rgba(216,182,98,.82);}
+.ti.r{color:rgba(26,162,138,.45);}
+.ti.g{color:rgba(200,164,72,.4);}
 
 /* SECTION HELPERS */
 .sec{position:relative;z-index:3;}
 .inner{max-width:1240px;margin:0 auto;}
-.lbl{display:flex;align-items:center;gap:12px;font-size:8px;letter-spacing:.45em;text-transform:uppercase;margin-bottom:20px;}
+.lbl{display:flex;align-items:center;gap:12px;font-size:7px;letter-spacing:.45em;text-transform:uppercase;margin-bottom:20px;}
 .lbl::before{content:'▸';}
 .tl{color:var(--tealhi);}
 .gl{color:var(--goldhi);}
@@ -149,16 +150,16 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .man-h em{font-style:italic;color:var(--goldhi);}
 .man-body{font-size:15px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;margin-bottom:32px;}
 .enemy-bar{background:rgba(5,8,16,.98);border-left:3px solid rgba(140,32,32,.45);padding:22px 28px;margin-top:32px;}
-.enemy-bar p{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.6vw,20px);font-weight:300;font-style:italic;color:rgba(212,196,178,.88);letter-spacing:.04em;line-height:1.75;}
+.enemy-bar p{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.6vw,20px);font-weight:300;font-style:italic;color:rgba(200,180,160,.65);letter-spacing:.04em;line-height:1.75;}
 .enemy-bar strong{color:var(--t1);font-style:normal;}
 
 /* EV CARD */
 .ev-card{background:var(--dark);border:1px solid rgba(26,162,138,.14);overflow:hidden;}
 .ev-head{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.1);}
-.ev-head-lbl{font-size:8px;letter-spacing:.28em;color:var(--tealhi);text-transform:uppercase;}
-.ev-head-id{font-size:8px;letter-spacing:.2em;color:var(--goldhi);text-transform:uppercase;}
+.ev-head-lbl{font-size:7px;letter-spacing:.28em;color:var(--tealhi);text-transform:uppercase;}
+.ev-head-id{font-size:7px;letter-spacing:.2em;color:var(--goldhi);text-transform:uppercase;}
 .ev-body{padding:28px 22px;display:flex;flex-direction:column;gap:14px;}
-.ev-sub{font-size:10px;letter-spacing:.15em;color:#aac4d3;text-transform:uppercase;margin-bottom:6px;}
+.ev-sub{font-size:10px;letter-spacing:.15em;color:#8ab8cc;text-transform:uppercase;margin-bottom:6px;}
 .ev-div{height:1px;background:rgba(255,255,255,.06);margin:6px 0;}
 .vr{display:flex;align-items:center;gap:14px;}
 .vi{width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;}
@@ -171,7 +172,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .origin{padding:140px 60px;background:var(--black);position:relative;overflow:hidden;}
 .origin::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(26,162,138,.25),transparent);}
 .origin-inner{max-width:820px;margin:0 auto;}
-.origin-label{font-size:8px;letter-spacing:.5em;text-transform:uppercase;color:rgba(26,162,138,.62);margin-bottom:48px;display:flex;align-items:center;gap:14px;}
+.origin-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:rgba(26,162,138,.45);margin-bottom:48px;display:flex;align-items:center;gap:14px;}
 .origin-label::after{content:'';flex:1;height:1px;background:rgba(26,162,138,.1);}
 .origin-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,64px);font-weight:700;line-height:1;color:var(--t1);margin-bottom:48px;}
 .origin-h em{font-style:italic;color:var(--goldhi);}
@@ -181,7 +182,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .origin-sig{margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:20px;}
 .origin-sig-line{width:40px;height:1px;background:rgba(26,162,138,.25);}
 .origin-sig-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;font-style:italic;color:var(--t1);letter-spacing:.06em;}
-.origin-sig-title{font-size:8px;letter-spacing:.3em;color:var(--tealhi);text-transform:uppercase;margin-top:4px;}
+.origin-sig-title{font-size:7px;letter-spacing:.3em;color:var(--tealhi);text-transform:uppercase;margin-top:4px;}
 
 /* WHO */
 .who{padding:140px 60px;background:var(--mid);}
@@ -194,13 +195,13 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .go-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:rgba(26,162,138,.18);line-height:1;}
 .go-body h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--t1);margin-bottom:8px;}
 .go-body p{font-size:13px;font-weight:300;color:var(--t2);line-height:1.85;letter-spacing:.04em;}
-.go-badge{font-size:8px;letter-spacing:.25em;text-transform:uppercase;color:var(--tealhi);border:1px solid rgba(26,162,138,.25);padding:3px 10px;display:inline-block;margin-bottom:10px;}
+.go-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;color:var(--tealhi);border:1px solid rgba(26,162,138,.25);padding:3px 10px;display:inline-block;margin-bottom:10px;}
 .go-arr{font-size:18px;color:rgba(26,162,138,.25);}
 .stop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;}
 .stop-card{background:rgba(8,12,20,.9);border-top:2px solid rgba(140,32,32,.15);padding:32px 28px;}
 .stop-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--t2);margin-bottom:10px;margin-top:12px;}
 .stop-card p{font-size:12px;font-weight:300;color:var(--t3);line-height:1.8;letter-spacing:.04em;}
-.stop-badge{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,80,80,.6);border:1px solid rgba(140,32,32,.2);padding:3px 10px;}
+.stop-badge{font-size:7px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,80,80,.6);border:1px solid rgba(140,32,32,.2);padding:3px 10px;}
 
 /* INGREDIENTS */
 .ingredients{padding:140px 60px;background:var(--dark);}
@@ -212,10 +213,10 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .tier-bar{display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;border-left:3px solid;}
 .t1 .tier-bar{border-left-color:var(--goldhi);background:rgba(200,164,72,.04);}
 .t2 .tier-bar{border-left-color:var(--teal);background:rgba(26,162,138,.03);}
-.t-badge{font-size:8px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid;font-family:'DM Mono',monospace;}
+.t-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid;font-family:'DM Mono',monospace;}
 .t1 .t-badge{color:var(--goldhi);border-color:rgba(200,164,72,.35);}
 .t2 .t-badge{color:var(--tealhi);border-color:rgba(26,162,138,.28);}
-.t-desc{font-size:8px;letter-spacing:.15em;color:#aec0ca;text-transform:uppercase;}
+.t-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
 .ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .ic{background:var(--mid);padding:22px 20px;position:relative;transition:background .3s;}
 .ic::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;transform:scaleY(0);transition:transform .32s;transform-origin:bottom;}
@@ -224,18 +225,18 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ic:hover{background:var(--panel);}
 .ic:hover::before{transform:scaleY(1);}
 .ic-name{font-size:12px;font-weight:400;letter-spacing:.07em;color:var(--t1);margin-bottom:2px;}
-.ic-brand{font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
+.ic-brand{font-size:7px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
 .ic-dose{font-size:9px;color:var(--tealhi);letter-spacing:.1em;}
-.ic-mech{font-size:11px;font-weight:300;color:#a8bdcb;margin-top:6px;line-height:1.55;letter-spacing:.04em;}
+.ic-mech{font-size:11px;font-weight:300;color:#bccbd8;margin-top:6px;line-height:1.55;letter-spacing:.04em;}
 .ic-ev{display:flex;align-items:center;gap:7px;margin-top:10px;}
 .ev-bar{flex:1;height:2px;background:rgba(255,255,255,.06);border-radius:1px;overflow:hidden;}
 .ev-fill{height:100%;width:0;border-radius:1px;transition:width 1.4s cubic-bezier(.16,1,.3,1);}
 .t1 .ev-fill{background:linear-gradient(90deg,rgba(200,164,72,.5),var(--goldhi));}
 .t2 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.5),var(--tealhi));}
-.ev-pct{font-size:8px;color:#aec0ca;}
+.ev-pct{font-size:9px;color:#bccbd8;}
 .tier3-bar{border-left:3px solid rgba(26,162,138,.2);background:rgba(26,162,138,.02);display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;}
-.tier3-badge{font-size:8px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:var(--t3);font-family:'DM Mono',monospace;}
-.tier3-desc{font-size:8px;letter-spacing:.15em;color:#aec0ca;text-transform:uppercase;}
+.tier3-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:var(--t3);font-family:'DM Mono',monospace;}
+.tier3-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
 .tier3 .ic::before{background:rgba(26,162,138,.3);}
 .tier3 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.3),rgba(26,162,138,.6));}
 
@@ -250,12 +251,12 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ritual-step{background:var(--dark);padding:36px 28px;position:relative;border-top:2px solid rgba(26,162,138,.1);transition:border-top-color .4s,background .4s;}
 .ritual-step:hover{background:var(--panel);border-top-color:var(--tealhi);}
 .ritual-time{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--tealhi);letter-spacing:.08em;display:block;margin-bottom:10px;}
-.ritual-step-label{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--goldhi);margin-bottom:14px;display:block;}
+.ritual-step-label{font-size:7px;letter-spacing:.3em;text-transform:uppercase;color:var(--goldhi);margin-bottom:14px;display:block;}
 .ritual-step h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--t1);margin-bottom:10px;}
 .ritual-step p{font-size:12px;font-weight:300;color:var(--t2);line-height:1.85;letter-spacing:.04em;}
 .ritual-step-num{position:absolute;bottom:18px;right:18px;font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:rgba(26,162,138,.04);line-height:1;pointer-events:none;}
 .ritual-doctrine{background:var(--dark);border:1px solid rgba(26,162,138,.1);padding:32px 44px;text-align:center;clip-path:polygon(16px 0%,100% 0%,100% calc(100% - 16px),calc(100% - 16px) 100%,0% 100%,0% 16px);}
-.ritual-doctrine p{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;font-style:italic;color:#a8bdcb;letter-spacing:.07em;line-height:1.85;}
+.ritual-doctrine p{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;font-style:italic;color:#8aafc0;letter-spacing:.07em;line-height:1.85;}
 .ritual-doctrine strong{color:var(--t1);font-style:normal;font-weight:600;}
 
 /* WHY IT WORKS */
@@ -265,8 +266,8 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .why-h em{font-style:italic;color:var(--goldhi);}
 .why-body{font-size:15px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;}
 .why-table{background:var(--mid);border:1px solid rgba(26,162,138,.12);overflow:hidden;}
-.wt-head{display:grid;grid-template-columns:1.2fr 1fr 1fr;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.12);padding:12px 20px;font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--tealhi);}
-.wt-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;font-weight:300;letter-spacing:.04em;color:#b2c7d3;transition:background .3s;align-items:center;}
+.wt-head{display:grid;grid-template-columns:1.2fr 1fr 1fr;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.12);padding:12px 20px;font-size:7px;letter-spacing:.28em;text-transform:uppercase;color:var(--tealhi);}
+.wt-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;font-weight:300;letter-spacing:.04em;color:#9ab8c8;transition:background .3s;align-items:center;}
 .wt-row:last-child{border-bottom:none;}
 .wt-row:hover{background:rgba(26,162,138,.04);}
 .wt-gold{color:var(--goldhi);font-size:12px;}
@@ -288,18 +289,18 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .proof{padding:140px 60px;background:var(--dark);}
 .proof-head{text-align:center;margin-bottom:72px;}
 .proof-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,78px);font-weight:700;font-style:italic;color:var(--t1);margin-bottom:12px;}
-.proof-sub{font-size:8px;letter-spacing:.22em;color:#a8bac6;text-transform:uppercase;}
+.proof-sub{font-size:8px;letter-spacing:.22em;color:#8aaabb;text-transform:uppercase;}
 .tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
 .tc{background:var(--mid);padding:44px 36px;position:relative;border-top:2px solid transparent;transition:border-top-color .4s,transform .4s;}
 .tc:hover{border-top-color:var(--gold);transform:translateY(-5px);}
-.tc-tag{font-size:8px;letter-spacing:.28em;color:#aec0ca;text-transform:uppercase;margin-bottom:16px;}
+.tc-tag{font-size:7px;letter-spacing:.28em;color:#7a9eb0;text-transform:uppercase;margin-bottom:16px;}
 .tc-stars{display:flex;gap:3px;margin-bottom:18px;}
 .star{color:var(--goldhi);font-size:11px;}
 .tc-q{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;font-style:italic;color:#e8e4dc;line-height:1.9;margin-bottom:32px;position:relative;z-index:1;}
 .tc-q::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:150px;color:rgba(200,164,72,.04);position:absolute;top:-24px;left:-12px;line-height:1;pointer-events:none;}
 .tc-name{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--t1);}
-.tc-role{font-size:8px;letter-spacing:.16em;color:var(--goldhi);margin-top:4px;}
-.tc-dur{font-size:8px;letter-spacing:.14em;color:#aec0ca;margin-top:4px;}
+.tc-role{font-size:7px;letter-spacing:.16em;color:var(--goldhi);margin-top:4px;}
+.tc-dur{font-size:7px;letter-spacing:.14em;color:#7a9aaa;margin-top:4px;}
 
 /* VERGELIJKING */
 .compare{padding:140px 60px;background:var(--black);}
@@ -319,7 +320,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ct-col-other{width:17%;}
 .ct-crit{display:block;font-size:12px;color:var(--t2);letter-spacing:.04em;margin-bottom:4px;font-weight:400;}
 .ct-crit-sub{display:block;font-size:9px;color:var(--t4);letter-spacing:.05em;line-height:1.5;}
-.ct-brand-sub{display:block;font-size:8px;letter-spacing:.2em;color:var(--t4);margin-top:3px;}
+.ct-brand-sub{display:block;font-size:7px;letter-spacing:.2em;color:var(--t4);margin-top:3px;}
 .ct-yes{display:block;color:var(--tealhi);font-size:12px;margin-bottom:3px;}
 .ct-mid{display:block;color:var(--gold);font-size:12px;margin-bottom:3px;}
 .ct-no{display:block;color:rgba(200,80,80,.7);font-size:12px;margin-bottom:3px;}
@@ -364,28 +365,28 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .exclusion-block em{color:rgba(200,80,80,.65);font-style:normal;}
 .anchor{background:rgba(140,32,32,.05);border:1px solid rgba(140,32,32,.12);padding:18px 28px;margin-bottom:18px;display:flex;align-items:center;gap:16px;}
 .anchor-lbl{font-size:8px;letter-spacing:.2em;color:rgba(200,80,80,.6);text-transform:uppercase;flex:1;text-align:left;}
-.anchor-price{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:rgba(216,182,98,.82);text-decoration:line-through;}
-.anchor-note{font-size:8px;letter-spacing:.16em;color:#a8bac6;text-transform:uppercase;}
+.anchor-price{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:rgba(200,164,72,.4);text-decoration:line-through;}
+.anchor-note{font-size:7px;letter-spacing:.16em;color:#8aaabb;text-transform:uppercase;}
 .scarcity{background:rgba(200,164,72,.05);border:1px solid rgba(200,164,72,.18);padding:22px 28px;margin-bottom:28px;display:flex;align-items:center;gap:28px;text-align:left;}
 .sc-info{flex:1;}
 .sc-text{font-size:8px;letter-spacing:.17em;color:#b8ccda;text-transform:uppercase;line-height:2;}
 .sc-bar{height:3px;background:rgba(255,255,255,.06);margin-top:10px;}
-.sc-fill{height:100%;background:linear-gradient(90deg,rgba(216,182,98,.82),var(--goldhi));width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1);}
-.sc-pct{font-size:8px;color:var(--gold);margin-top:5px;text-align:right;letter-spacing:.18em;}
+.sc-fill{height:100%;background:linear-gradient(90deg,rgba(200,164,72,.4),var(--goldhi));width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1);}
+.sc-pct{font-size:7px;color:var(--gold);margin-top:5px;text-align:right;letter-spacing:.18em;}
 .sc-num{text-align:center;}
 .sc-count{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:700;color:var(--goldhi);line-height:1;display:block;}
-.sc-lbl{font-size:8px;letter-spacing:.22em;color:#aec0ca;text-transform:uppercase;margin-top:2px;display:block;}
+.sc-lbl{font-size:7px;letter-spacing:.22em;color:#7a9eb0;text-transform:uppercase;margin-top:2px;display:block;}
 .price-card{background:var(--mid);border:1px solid rgba(26,162,138,.16);padding:60px 52px;position:relative;overflow:hidden;margin-bottom:18px;clip-path:polygon(20px 0%,100% 0%,100% calc(100% - 20px),calc(100% - 20px) 100%,0% 100%,0% 20px);}
 .price-card::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--tealhi),transparent);}
 .pc-bg{position:absolute;bottom:-20px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:200px;letter-spacing:.08em;color:rgba(26,162,138,.02);pointer-events:none;line-height:1;}
-.pc-tag{display:inline-block;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--black);background:var(--tealhi);padding:5px 14px;margin-bottom:36px;font-family:'DM Mono',monospace;}
+.pc-tag{display:inline-block;font-size:7px;letter-spacing:.3em;text-transform:uppercase;color:var(--black);background:var(--tealhi);padding:5px 14px;margin-bottom:36px;font-family:'DM Mono',monospace;}
 .pc-price{font-family:'Cormorant Garamond',serif;font-size:116px;font-weight:700;color:var(--t1);line-height:1;letter-spacing:-.02em;text-align:center;}
 .pc-price sup{font-size:40px;vertical-align:top;margin-top:22px;display:inline-block;color:var(--goldhi);}
-.pc-period{font-size:8px;letter-spacing:.24em;color:#aec0ca;text-transform:uppercase;margin:10px 0 40px;text-align:center;}
+.pc-period{font-size:8px;letter-spacing:.24em;color:#7a9eb0;text-transform:uppercase;margin:10px 0 40px;text-align:center;}
 .pc-feats{list-style:none;text-align:left;margin-bottom:44px;display:flex;flex-direction:column;gap:12px;}
 .pc-feats li{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:300;color:var(--t2);letter-spacing:.05em;}
 .pc-feats li::before{content:'▸';color:var(--tealhi);font-size:9px;flex-shrink:0;}
-.pc-note{font-size:8px;letter-spacing:.16em;color:#aec0ca;text-transform:uppercase;margin-top:26px;}
+.pc-note{font-size:8px;letter-spacing:.16em;color:#7a9eb0;text-transform:uppercase;margin-top:26px;}
 .guarantee{background:rgba(26,162,138,.04);border:1px solid rgba(26,162,138,.13);padding:26px 30px;display:flex;gap:20px;align-items:flex-start;text-align:left;clip-path:polygon(10px 0%,100% 0%,100% calc(100% - 10px),calc(100% - 10px) 100%,0% 100%,0% 10px);}
 .guar-icon{font-size:26px;flex-shrink:0;margin-top:2px;}
 .guar-title{font-size:10px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--t1);margin-bottom:8px;}
@@ -399,55 +400,18 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .final-inner{position:relative;z-index:1;}
 .final-h{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7.5vw,116px);font-weight:700;line-height:.9;color:var(--t1);margin-bottom:28px;}
 .final-h em{font-style:italic;color:var(--goldhi);display:block;}
-.final-pre{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,38px);font-weight:300;letter-spacing:.12em;color:#a8bdcb;display:block;margin-bottom:10px;}
+.final-pre{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,38px);font-weight:300;letter-spacing:.12em;color:#8aafc0;display:block;margin-bottom:10px;}
 .final-dots{font-family:'DM Mono',monospace;font-size:clamp(22px,3vw,44px);color:var(--goldhi);letter-spacing:.45em;display:block;margin-bottom:52px;}
 .final-sub{font-size:16px;font-weight:300;color:var(--t2);max-width:480px;margin:0 auto 52px;line-height:1.85;letter-spacing:.05em;}
 
 /* FOOTER */
 footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding:36px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;}
-.foot-logo{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#a8bdcb;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#8aafc0;}
 .foot-logo em{font-style:normal;color:var(--tealhi);}
-.foot-copy{font-size:8px;letter-spacing:.2em;color:#aec0ca;text-transform:uppercase;}
+.foot-copy{font-size:7px;letter-spacing:.2em;color:#7a9eb0;text-transform:uppercase;}
 .foot-links{display:flex;gap:24px;list-style:none;}
-.foot-links a{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#aec0ca;text-decoration:none;transition:color .3s;}
+.foot-links a{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:#7a9aaa;text-decoration:none;transition:color .3s;}
 .foot-links a:hover{color:var(--tealhi);}
-
-/* ============ V15 ADD-ONS ============ */
-/* LOGO CREST */
-.hero-crest-wrap{display:flex;flex-direction:column;align-items:center;gap:15px;margin-bottom:30px;opacity:0;animation:fadeUp .8s ease .05s forwards;}
-.logo-card{display:none;}
-.hero-logo{width:min(390px,82vw);height:auto;filter:drop-shadow(0 10px 32px rgba(0,0,0,.6));}
-.hero-crest-tag{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.55em;text-transform:uppercase;color:var(--goldhi);padding-left:.55em;}
-
-/* MILITARY EYEBROW */
-.mil-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:var(--tealhi);border:1px solid rgba(26,162,138,.22);padding:6px 15px;margin-bottom:22px;}
-.mil-eyebrow::before{content:'◆';font-size:8px;color:var(--goldhi);}
-
-/* CREED / DOCTRINE */
-.creed{padding:140px 60px;background:var(--black);position:relative;overflow:hidden;}
-.creed::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(26,162,138,.05),transparent 60%);pointer-events:none;}
-.creed-inner{max-width:920px;margin:0 auto;position:relative;z-index:1;}
-.creed-panel{border:1px solid rgba(200,164,72,.16);background:rgba(5,8,16,.7);padding:64px 56px;position:relative;clip-path:polygon(22px 0%,100% 0%,100% calc(100% - 22px),calc(100% - 22px) 100%,0% 100%,0% 22px);}
-.creed-panel::before{content:'';position:absolute;top:0;left:22%;right:22%;height:1px;background:linear-gradient(90deg,transparent,var(--goldhi),transparent);}
-.creed-head{text-align:center;margin-bottom:44px;}
-.creed-class{font-size:8px;letter-spacing:.4em;text-transform:uppercase;color:rgba(200,164,72,.55);margin-bottom:18px;display:flex;align-items:center;justify-content:center;gap:12px;}
-.creed-class::before,.creed-class::after{content:'';width:34px;height:1px;background:rgba(200,164,72,.25);}
-.creed-h{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.4vw,62px);font-weight:700;line-height:1;color:var(--t1);}
-.creed-h em{font-style:italic;color:var(--goldhi);}
-.creed-list{display:flex;flex-direction:column;gap:0;margin:0 auto;max-width:680px;}
-.creed-line{display:flex;gap:20px;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.05);}
-.creed-line:last-child{border-bottom:none;}
-.creed-no{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:var(--tealhi);flex-shrink:0;width:30px;}
-.creed-txt{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);font-weight:300;font-style:italic;color:#cdd6dd;line-height:1.55;letter-spacing:.03em;}
-.creed-txt strong{color:var(--t1);font-style:normal;font-weight:600;}
-.creed-sig{margin-top:44px;text-align:center;font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:var(--tealhi);}
-.creed-sig span{color:var(--goldhi);}
-
-/* STANDARD-ISSUE STRIP */
-.stdissue{background:var(--dark);border-top:1px solid rgba(200,164,72,.1);border-bottom:1px solid rgba(200,164,72,.1);padding:22px 60px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;text-align:center;}
-.stdissue span{font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:#aec0ca;}
-.stdissue b{color:var(--goldhi);font-weight:400;}
-.stdissue .dot{color:rgba(216,182,98,.82);}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -466,9 +430,6 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   .ct-scores{grid-template-columns:1fr 1fr;}
   footer{flex-direction:column;gap:16px;text-align:center;}
   .foot-links{flex-wrap:wrap;justify-content:center;}
-  .creed{padding:90px 20px;}
-  .creed-panel{padding:44px 26px;}
-  .stdissue{padding:18px 20px;gap:10px;}
 }
 @media(max-width:640px){
   .trust-strip{flex-wrap:wrap;}
@@ -491,11 +452,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   <ul class="nav-links">
     <li><a href="#ingredients">// Formule</a></li>
     <li><a href="#protocol">// Protocol</a></li>
-    <li><a href="#proof">// Veldrapporten</a></li>
+    <li><a href="#belofte">// Ons Woord</a></li>
     <li><a href="#briefing">// Gratis Briefing</a></li>
     <li><a href="#pricing">// Activering</a></li>
   </ul>
-  <a href="#pricing" class="nav-cta">Activeer</a>
+  <a href="#pricing" class="nav-cta">Begin Vandaag</a>
 </nav>
 
 <!-- HERO -->
@@ -503,33 +464,28 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   <div class="brk tl"></div><div class="brk tr"></div>
   <div class="brk bl"></div><div class="brk br"></div>
 
-  <div class="hero-crest-wrap">
-    <img class="hero-logo" src="cogvivo-logo.webp" alt="Cogvivo" width="380" height="249" fetchpriority="high">
-    <span class="hero-crest-tag">Elite Combat Pro</span>
-  </div>
-
   <div class="htb">
-    <span class="htb-item">Klinisch Gedoseerd</span>
+    <span class="htb-item"><span class="htb-dot"></span>Systeem Actief</span>
     <span class="htb-sep">|</span>
-    <span class="htb-item">Military-Grade Formulatie</span>
+    <span class="htb-item">EU Novel Food Conform</span>
     <span class="htb-sep">|</span>
     <span class="htb-item">Magtein® · EU-goedgekeurd</span>
     <span class="htb-sep">|</span>
-    <span class="htb-item">41 Actieve Compounds</span>
+    <span class="htb-item">35 Actieve Ingrediënten</span>
   </div>
 
   <div class="slogan-wrap">
     <h1 class="slogan">Smart People <span class="slogan-dots">Already..........</span></h1>
   </div>
 
-  <p class="hero-claim">Eén systeem dat elk neurobiologisch mechanisme aanpakt dat cognitie bepaalt.<br>Gebouwd voor de mensen die de studies hebben gelezen — niet voor de mensen die hopen dat iets werkt.</p>
-  <p class="hero-sub">Elite Combat Pro · 41 klinisch gedoseerde compounds · Military-grade formulatie · EU-conform</p>
+  <p class="hero-claim">Elk cognitief mechanisme dat een supplement legaal kan raken — op de dosis die de studies vragen, niet de dosis die het label mooi maakt.<br>Gebouwd voor wie de studies zelf leest.</p>
+  <p class="hero-sub">35 klinisch gedoseerde ingrediënten · 14 mechanismen · EU-conform</p>
 
   <div class="hero-ctas">
-    <a href="#pricing" class="btn-main">Activeer Protocol</a>
+    <a href="#pricing" class="btn-main">Begin Vandaag</a>
     <a href="#ingredients" class="btn-alt">// Bekijk de Formule</a>
   </div>
-  <div class="hero-guar">60-Dagen Garantie · Niet tevreden = volledige terugbetaling</div>
+  <div class="hero-guar">Elke milligram op het label · Elke dosis herleidbaar naar de studie</div>
 </section>
 
 <!-- WETTELIJKE DISCLAIMER BANNER -->
@@ -544,7 +500,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 
 <!-- TRUST STRIP -->
 <div class="trust-strip">
-  <div class="ts rv"><span class="ts-val c-t">41</span><span class="ts-lbl">Actieve<br>Ingrediënten</span></div>
+  <div class="ts rv"><span class="ts-val c-t">35</span><span class="ts-lbl">Actieve<br>Ingrediënten</span></div>
   <div class="ts rv d1"><span class="ts-val c-g">14</span><span class="ts-lbl">Mechanismen<br>Gedekt</span></div>
   <div class="ts rv d2"><span class="ts-val c-w">60d</span><span class="ts-lbl">Cognitieve<br>Garantie</span></div>
   <div class="ts rv d3"><span class="ts-val c-g">EU</span><span class="ts-lbl">Novel Food<br>Conform</span></div>
@@ -554,7 +510,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 <!-- TICKER -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-inner">
-    <span class="ti r">COGVIVO · 41 INGREDIËNTEN</span><span class="ti g">14 NEUROBIOLOGISCHE MECHANISMEN</span><span class="ti r">EU-CONFORM · NVWA-KADERS GERESPECTEERD</span><span class="ti g">MAGTEIN® · EU VERORDENING 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">KLINISCH GEDOSEERD · GEEN PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARANTE FORMULERING</span><span class="ti g">AM/PM CIRCADIAAN PROTOCOL</span><span class="ti r">MILITARY-GRADE FORMULEERDISCIPLINE</span><span class="ti r">COGVIVO · 41 INGREDIËNTEN</span><span class="ti g">14 NEUROBIOLOGISCHE MECHANISMEN</span><span class="ti r">EU-CONFORM · NVWA-KADERS GERESPECTEERD</span><span class="ti g">MAGTEIN® · EU VERORDENING 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">KLINISCH GEDOSEERD · GEEN PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARANTE FORMULERING</span><span class="ti g">AM/PM CIRCADIAAN PROTOCOL</span><span class="ti r">MILITARY-GRADE FORMULEERDISCIPLINE</span>
+    <span class="ti r">COGVIVO · 35 INGREDIËNTEN</span><span class="ti g">14 NEUROBIOLOGISCHE MECHANISMEN</span><span class="ti r">EU-CONFORM · NVWA-KADERS GERESPECTEERD</span><span class="ti g">MAGTEIN® · EU VERORDENING 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">KLINISCH GEDOSEERD · GEEN PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARANTE FORMULERING</span><span class="ti g">AM/PM CIRCADIAAN PROTOCOL</span><span class="ti r">COGVIVO · 35 INGREDIËNTEN</span><span class="ti g">14 NEUROBIOLOGISCHE MECHANISMEN</span><span class="ti r">EU-CONFORM · NVWA-KADERS GERESPECTEERD</span><span class="ti g">MAGTEIN® · EU VERORDENING 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">KLINISCH GEDOSEERD · GEEN PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARANTE FORMULERING</span><span class="ti g">AM/PM CIRCADIAAN PROTOCOL</span>
   </div>
 </div>
 
@@ -566,9 +522,9 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <p class="lbl tl">// Missie</p>
         <h2 class="man-h">De industrie<br>verkoopt <em>hoop.</em><br>Wij leveren <em>bewijs.</em></h2>
         <p class="man-body">
-          90 procent van de supplementenmarkt is onderdoseerd, onbewezen, of allebei. Mooie verpakkingen. Irrelevante hoeveelheden. Claims zonder één peer-reviewed referentie. De strategie werkt, want de meeste consumenten lezen het label niet.
+          Negentig procent van de supplementenmarkt is onderdoseerd, onbewezen, of allebei. Mooie verpakkingen. Irrelevante hoeveelheden. Claims zonder één peer-reviewed referentie. De strategie werkt, want de meeste consumenten lezen het label niet.
           <br><br>
-          Elite Combat Pro is er voor de uitzondering. Voor degene die het label wél leest — en dan ontdekt dat 100mg Lion's Mane in geen enkele humane studie effect produceert. Die het verschil kent tussen in-vitro data en een gerandomiseerde klinische trial. Die niet koopt op basis van de verpakking, maar op basis van de wetenschap achter de dosering.
+          Cogvivo Protocol is er voor de uitzondering. Voor degene die het label wél leest — en dan ontdekt dat 100mg Lion's Mane in geen enkele humane studie effect produceert. Die het verschil kent tussen in-vitro data en een gerandomiseerde klinische trial. Die niet koopt op basis van de verpakking, maar op basis van de wetenschap achter de dosering.
         </p>
         <div class="enemy-bar rv">
           <p>De supplementindustrie veronderstelt dat jij niet kunt lezen. Dat jij geen doseringen controleert. Dat jij koopt op de foto van de verpakking. <strong>Cogvivo is gebouwd voor de uitzondering op die veronderstelling.</strong></p>
@@ -577,11 +533,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <div class="rv d2">
         <div class="ev-card">
           <div class="ev-head">
-            <span class="ev-head-lbl">// Veldbeoordeling REF-ECP-001</span>
-            <span class="ev-head-id">GEVERIFIEERD</span>
+            <span class="ev-head-lbl">// Formulevergelijking</span>
+            <span class="ev-head-id">TRANSPARANT</span>
           </div>
           <div class="ev-body">
-            <p class="ev-sub">Industriestandaard vs. Elite Combat Pro</p>
+            <p class="ev-sub">Industriestandaard vs. Cogvivo Protocol</p>
             <div class="vr no"><div class="vi">✕</div><span class="vt">100 mg Lion's Mane — klinisch irrelevant</span></div>
             <div class="vr no"><div class="vi">✕</div><span class="vt">Proprietary blend — doseringen verborgen</span></div>
             <div class="vr no"><div class="vi">✕</div><span class="vt">250 mg Bacopa — onder therapeutische drempel</span></div>
@@ -609,11 +565,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <div class="origin-body">
         <p>Het begon als frustratie. Drie jaar diep onderzoek naar wat de wetenschap werkelijk zegt over cognitieve performance — niet de marketingversie, maar de primaire literatuur. Elk beweerd mechanisme nagetrokken. Elke dosering vergeleken met de humane trials waarop de claim gebaseerd is. Elk supplement op de markt getoetst aan de studies die fabrikanten zelf citeren.</p>
         <p>De conclusie was telkens identiek: de producten bevatten een fractie van de hoeveelheden die effecten produceren in die studies. Niet bij vergissing. Per ontwerp. Meer werkzame stof kost meer geld, en de gemiddelde consument controleert het label toch niet. Dat model werkt commercieel. Het werkt neurologisch niet.</p>
-        <p>Elite Combat Pro bestaat omdat er een formulering moest zijn zonder dat compromis. Elk mechanisme gedekt. Elke dosering klinisch actief. Elke compound transparant op het label, verifieerbaar via de studies die eraan ten grondslag liggen. Als je dit leest en denkt "eindelijk" — dan is dit product voor jou.</p>
+        <p>Cogvivo Protocol bestaat omdat er een formulering moest zijn zonder dat compromis. Elk mechanisme gedekt. Elke dosering klinisch actief. Elke compound transparant op het label, verifieerbaar via de studies die eraan ten grondslag liggen. Als je dit leest en denkt "eindelijk" — dan is dit product voor jou.</p>
         <div class="origin-sig">
           <div class="origin-sig-line"></div>
           <div>
-            <p class="origin-sig-name">Cogvivo Formulatie-eenheid</p>
+            <p class="origin-sig-name">Cogvivo Formulatieteam</p>
             <p class="origin-sig-title">// Amsterdam · 2025</p>
           </div>
         </div>
@@ -625,13 +581,13 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 <!-- VOOR WIE -->
 <section class="who sec" id="wie">
   <div class="inner">
-    <h2 class="who-h rv">Elite Combat Pro<br>is niet voor iedereen.<br><em>Is het voor jou?</em></h2>
-    <p class="who-sub rv">Deze formulering is samengesteld voor één type operator. Screening hieronder — herken je jezelf?</p>
+    <h2 class="who-h rv">Cogvivo Protocol<br>is niet voor iedereen.<br><em>Is het voor jou?</em></h2>
+    <p class="who-sub rv">De formulering is ontwikkeld voor een specifiek type persoon. Herken jij jezelf hieronder?</p>
     <div class="go-stack rv">
       <div class="go-card">
         <div class="go-num">01</div>
         <div class="go-body">
-          <span class="go-badge">▸ Gekwalificeerd</span>
+          <span class="go-badge">▸ Toegang</span>
           <h3>De High-Performer</h3>
           <p>Je bouwt iets dat telt — een bedrijf, een vermogen, een positie. Elke dag telt, elke beslissing telt, elke vergadering telt. Je behandelt cognitie als het operationele voordeel dat het is en je accepteert geen suboptimale dagen als dat te voorkomen is.</p>
         </div>
@@ -640,7 +596,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <div class="go-card">
         <div class="go-num">02</div>
         <div class="go-body">
-          <span class="go-badge">▸ Gekwalificeerd</span>
+          <span class="go-badge">▸ Toegang</span>
           <h3>De Wetenschappelijke Denker</h3>
           <p>Je leest primaire literatuur. Je kent het verschil tussen in-vitro en humaan RCT-bewijs. Je bent klaar met merken die claims maken op basis van dierenstudies en de dosering uit het label niet onderbouwen met één publicatie. Je wilt mechanismen zien, niet slogans.</p>
         </div>
@@ -649,7 +605,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <div class="go-card">
         <div class="go-num">03</div>
         <div class="go-body">
-          <span class="go-badge">▸ Gekwalificeerd</span>
+          <span class="go-badge">▸ Toegang</span>
           <h3>De Precisie-Biohacker</h3>
           <p>Slaap, hartslagvariabiliteit, training, voeding — je optimaliseert alles systematisch. Je hersenen zijn het commandocentrum van je gehele systeem. Ze verdienen hetzelfde niveau van precisie en onderbouwing als de rest van je protocol. Niet meer of minder.</p>
         </div>
@@ -658,18 +614,18 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
     </div>
     <div class="stop-grid rv">
       <div class="stop-card">
-        <span class="stop-badge">✕ Afgekeurd</span>
+        <span class="stop-badge">✕ Geen toegang</span>
         <h3>De Koopjesjager</h3>
         <p>Goedkopere opties bestaan. Ze bevatten ook goedkopere ingrediënten, in goedkopere vormen, op goedkopere doseringen. Als prijs je primaire filter is, zijn wij niet jouw match — en dat is geen probleem.</p>
       </div>
       <div class="stop-card">
-        <span class="stop-badge">✕ Afgekeurd</span>
-        <h3>De Ongeduldige</h3>
+        <span class="stop-badge">✕ Geen toegang</span>
+        <h3>De Ongeduldigere</h3>
         <p>Neuroplasticiteit werkt over weken. Bacopa Monnieri bouwt effect op over 8 tot 12 weken. Als je morgen resultaat verwacht, is dit protocol niet voor jou. De biologie werkt niet op jouw tijdlijn.</p>
       </div>
       <div class="stop-card">
-        <span class="stop-badge">✕ Afgekeurd</span>
-        <h3>De Overtuigde Scepticus</h3>
+        <span class="stop-badge">✕ Geen toegang</span>
+        <h3>De Overtuigde Skepticus</h3>
         <p>Wij tonen mechanismen en peer-reviewed data, geen anekdotes en testimonials van influencers. Als je al besloten hebt dat supplementen niet werken, ongeacht de evidence — sluit dit venster en bespaar ons allebei de tijd.</p>
       </div>
     </div>
@@ -682,9 +638,9 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
     <div class="ing-intro">
       <div class="rv">
         <p class="lbl gl">// Compound Analyse</p>
-        <h2 class="ing-h">41 Ingrediënten.<br><em>Nul Compromissen.</em></h2>
+        <h2 class="ing-h">35 Ingrediënten.<br><em>Nul Compromissen.</em></h2>
       </div>
-      <p class="ing-body rv d2">Elk ingrediënt dient een specifiek neurobiologisch mechanisme en is gedoseerd op klinisch actief niveau — humaan onderbouwd waar mogelijk, sterk mechanistisch waar de data dieper onderzoek vereist. Alle stoffen EU-toegelaten; alle wettelijke limieten gerespecteerd.</p>
+      <p class="ing-body rv d2">Elk ingrediënt dient een specifiek neurobiologisch mechanisme en is gedoseerd op klinisch actief niveau — humaan onderbouwd waar mogelijk, sterk mechanistisch waar de data dieronderzoek vereist. Alle stoffen EU-toegelaten; alle wettelijke limieten gerespecteerd.</p>
     </div>
 
     <!-- TIER I -->
@@ -697,8 +653,8 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <div class="ic"><p class="ic-name">L-Tyrosine</p><p class="ic-brand">Vrij aminozuur</p><p class="ic-dose">1500 mg / dag</p><p class="ic-mech">Dopamine- & noradrenaline-precursor → focus onder hoge belasting</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="86"></div></div><span class="ev-pct">86%</span></div></div>
         <div class="ic"><p class="ic-name">Magnesium-L-threonaat</p><p class="ic-brand">Magtein®</p><p class="ic-dose">2000 mg / dag</p><p class="ic-mech">Synaptische dichtheid ↑ → werkgeheugen, plasticiteit (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="90"></div></div><span class="ev-pct">90%</span></div></div>
         <div class="ic"><p class="ic-name">DHA (omega-3)</p><p class="ic-brand">Algenolie · vegan</p><p class="ic-dose">500 mg DHA / dag</p><p class="ic-mech">Membraanfluïditeit & neurogenese — draagt bij aan normale hersenfunctie†</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="91"></div></div><span class="ev-pct">91%</span></div></div>
-        <div class="ic"><p class="ic-name">L-Theanine</p><p class="ic-brand">Generiek</p><p class="ic-dose">200 mg / dag</p><p class="ic-mech">Alfa-golfactiviteit ↑ → kalme, gerichte alertheid (sterkst met cafeïne)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="85"></div></div><span class="ev-pct">85%</span></div></div>
-        <div class="ic"><p class="ic-name">Cafeïne (optioneel)</p><p class="ic-brand">Watervrij · aparte SKU</p><p class="ic-dose">100 mg / dag</p><p class="ic-mech">Adenosine-antagonist → alertheid ↑; sterkst met L-theanine</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="95"></div></div><span class="ev-pct">95%</span></div></div>
+        <div class="ic"><p class="ic-name">L-Theanine</p><p class="ic-brand">Generiek</p><p class="ic-dose">200 mg / dag</p><p class="ic-mech">Alfa-golfactiviteit ↑ → kalme, gerichte alertheid (sterkst met cafeïne)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="85"></div></div>
+        <div class="ic"><p class="ic-name">Cafeïne (optioneel)</p><p class="ic-brand">Watervrij · aparte SKU</p><p class="ic-dose">100 mg / dag</p><p class="ic-mech">Adenosine-antagonist → alertheid ↑; sterkst met L-theanine</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="95"></div></div><span class="ev-pct">95%</span></div></div><span class="ev-pct">85%</span></div></div>
         <div class="ic"><p class="ic-name">Nicotinamide Riboside</p><p class="ic-brand">Niagen®</p><p class="ic-dose">300 mg / dag</p><p class="ic-mech">NAD+-biosynthese → cellulaire energie, DNA-herstel (EU-plafonddosis)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="84"></div></div><span class="ev-pct">84%</span></div></div>
         <div class="ic"><p class="ic-name">Fosfatidylserine</p><p class="ic-brand">Sharp-PS® · zonnebloem</p><p class="ic-dose">300 mg / dag</p><p class="ic-mech">HPA-as modulatie → cortisolrespons, geheugenconsolidatie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="87"></div></div><span class="ev-pct">87%</span></div></div>
       </div>
@@ -709,7 +665,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <div class="tier-bar"><span class="t-badge">Tier II</span><span class="t-desc">Sterke mechanistische en klinische onderbouwing</span></div>
       <div class="ing-grid">
         <div class="ic"><p class="ic-name">Lion's Mane</p><p class="ic-brand">8:1 vruchtlichaam · >30% bèta-glucaan</p><p class="ic-dose">1000 mg / dag</p><p class="ic-mech">NGF-ondersteuning → neuroplasticiteit, BDNF-cascade</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="82"></div></div><span class="ev-pct">82%</span></div></div>
-        <div class="ic"><p class="ic-name">Uridine-5'-monofosfaat</p><p class="ic-brand">Dinatriumzout</p><p class="ic-dose">500 mg / dag</p><p class="ic-mech">Synaps-membraan triade met DHA + choline → synaptogenese</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="80"></div></div><span class="ev-pct">80%</span></div></div>
+        
         <div class="ic"><p class="ic-name">Acetyl-L-carnitine</p><p class="ic-brand">Carnipure®</p><p class="ic-dose">1500 mg / dag</p><p class="ic-mech">Mitochondriaal transport + cholinerg → cerebrale energie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="83"></div></div><span class="ev-pct">83%</span></div></div>
         <div class="ic"><p class="ic-name">Rhodiola Rosea</p><p class="ic-brand">Rhodiolife® · 3% rosavins</p><p class="ic-dose">400 mg / dag</p><p class="ic-mech">Adaptogeen → mentaal uithoudingsvermogen ↑, vermoeidheid ↓</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="78"></div></div><span class="ev-pct">78%</span></div></div>
         <div class="ic"><p class="ic-name">Panax Ginseng</p><p class="ic-brand">Cereboost® / G115</p><p class="ic-dose">200 mg / dag</p><p class="ic-mech">Acute cognitie & alertheid → werkgeheugen, reactietijd</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="76"></div></div><span class="ev-pct">76%</span></div></div>
@@ -717,13 +673,13 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <div class="ic"><p class="ic-name">Pycnogenol®</p><p class="ic-brand">Dennenschors · 95% OPC</p><p class="ic-dose">100 mg / dag</p><p class="ic-mech">NO-synthese → cerebrale microcirculatie, aandacht, werkgeheugen</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="77"></div></div><span class="ev-pct">77%</span></div></div>
         <div class="ic"><p class="ic-name">Cacao-flavanolen</p><p class="ic-brand">Acticoa®</p><p class="ic-dose">200 mg flavanolen / dag</p><p class="ic-mech">Endotheliale functie → cerebrale doorbloeding (EFSA-claim)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="74"></div></div><span class="ev-pct">74%</span></div></div>
         <div class="ic"><p class="ic-name">PQQ</p><p class="ic-brand">BioPQQ®</p><p class="ic-dose">20 mg / dag</p><p class="ic-mech">Mitochondriogenese → nieuwe mitochondriën in neuronen (plafonddosis)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="72"></div></div><span class="ev-pct">72%</span></div></div>
-        <div class="ic"><p class="ic-name">R-alfa-liponzuur</p><p class="ic-brand">Na-R-ALA · Bio-Enhanced®</p><p class="ic-dose">300 mg / dag</p><p class="ic-mech">Mitochondriaal antioxidant → bio-energetica, neuroprotectie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="71"></div></div><span class="ev-pct">71%</span></div></div>
+        
         <div class="ic"><p class="ic-name">Co-enzym Q10</p><p class="ic-brand">Kaneka Ubiquinol</p><p class="ic-dose">100 mg / dag</p><p class="ic-mech">Elektronentransportketen → cerebrale energieproductie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
         <div class="ic"><p class="ic-name">Sulforafaan</p><p class="ic-brand">TrueBroc® broccoli</p><p class="ic-dose">100 mg / dag</p><p class="ic-mech">Nrf2-activatie → sterkste cellulaire antioxidant-respons</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="73"></div></div><span class="ev-pct">73%</span></div></div>
-        <div class="ic"><p class="ic-name">NAC</p><p class="ic-brand">N-acetyl-L-cysteïne</p><p class="ic-dose">600 mg / dag</p><p class="ic-mech">Glutathion-voorloper → oxidatieve balans, neuroprotectie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="72"></div></div><span class="ev-pct">72%</span></div></div>
+        
         <div class="ic"><p class="ic-name">Saffraanextract</p><p class="ic-brand">affron® · 3,5%</p><p class="ic-dose">28 mg / dag</p><p class="ic-mech">Stemming & executieve functie → focus, mentale veerkracht</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="74"></div></div><span class="ev-pct">74%</span></div></div>
-        <div class="ic"><p class="ic-name">EnXtra®</p><p class="ic-brand">Alpinia galanga extract</p><p class="ic-dose">300 mg / dag</p><p class="ic-mech">Aanhoudende alertheid tot 5 uur — cafeïnevrij, geen tolerantie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="66"></div></div><span class="ev-pct">66%</span></div></div>
-        <div class="ic"><p class="ic-name">Curcumine</p><p class="ic-brand">Bioavailable · ≤150 mg curcuminoïden</p><p class="ic-dose">200 mg / dag</p><p class="ic-mech">NF-κB modulatie → neuro-inflammatie ↓, BDNF ↑ (binnen ADI)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
+        
+        
       </div>
     </div>
 
@@ -738,8 +694,8 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <div class="ic"><p class="ic-name">Vitamine B6</p><p class="ic-brand">Pyridoxaal-5-fosfaat</p><p class="ic-dose">5 mg / dag</p><p class="ic-mech">Neurotransmittersynthese → serotonine, dopamine, GABA</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
         <div class="ic"><p class="ic-name">Riboflavine (B2)</p><p class="ic-brand">Vitamine B2</p><p class="ic-dose">5 mg / dag</p><p class="ic-mech">Cofactor methyleringscyclus (MTHFR-route)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="60"></div></div><span class="ev-pct">60%</span></div></div>
         <div class="ic"><p class="ic-name">Glycine</p><p class="ic-brand">Vrij aminozuur</p><p class="ic-dose">3000 mg / dag</p><p class="ic-mech">NMDA-coagonist → slaapkwaliteit, consolidatie (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="69"></div></div><span class="ev-pct">69%</span></div></div>
-        <div class="ic"><p class="ic-name">Apigenine</p><p class="ic-brand">99%</p><p class="ic-dose">50 mg / dag</p><p class="ic-mech">Slaap & CD38-modulatie → NAD+-sparing (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="62"></div></div><span class="ev-pct">62%</span></div></div>
-        <div class="ic"><p class="ic-name">Melatonine</p><p class="ic-brand">Synthetisch</p><p class="ic-dose">0,29 mg / dag</p><p class="ic-mech">Circadiaan signaal → inslaaplatentie ↓ (NL-conform &lt;0,3 mg, PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="65"></div></div><span class="ev-pct">65%</span></div></div>
+        <div class="ic"><p class="ic-name">Kamille-extract</p><p class="ic-brand">Gestand. Matricaria · apigenine</p><p class="ic-dose">250 mg / dag</p><p class="ic-mech">Rust & slaaparchitectuur → glymfatische klaring (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="62"></div></div><span class="ev-pct">62%</span></div></div>
+        
         <div class="ic"><p class="ic-name">Zink</p><p class="ic-brand">Bisglycinaat</p><p class="ic-dose">10 mg / dag</p><p class="ic-mech">NMDA-receptormodulatie → synaptische plasticiteit</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="60"></div></div><span class="ev-pct">60%</span></div></div>
         <div class="ic"><p class="ic-name">Vitamine D3</p><p class="ic-brand">Cholecalciferol</p><p class="ic-dose">2000 IU / dag</p><p class="ic-mech">Neurotrofinemodulatie → neuroprotectie, stemming</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
         <div class="ic"><p class="ic-name">Vitamine C</p><p class="ic-brand">Ascorbinezuur</p><p class="ic-dose">200 mg / dag</p><p class="ic-mech">Regenereert antioxidanten → normaal zenuwstelsel</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="58"></div></div><span class="ev-pct">58%</span></div></div>
@@ -785,43 +741,12 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <span class="ritual-time">90d</span>
         <span class="ritual-step-label">▸ Baseline Bereikt</span>
         <h3>Volledige Activering</h3>
-        <p>Na 90 dagen consistent protocol is de synaptische dichtheid aantoonbaar hoger, de NGF-cascade actief en de adaptieve stress-respons geoptimaliseerd. Operators meten. Geen uitzonderingen.</p>
+        <p>Na 90 dagen consistent protocol is de synapstische dichtheid aantoonbaar hoger, de NGF-cascade actief en de adaptieve stress-respons geoptimaliseerd. Operators meten. Geen uitzonderingen.</p>
         <span class="ritual-step-num">04</span>
       </div>
     </div>
     <div class="ritual-doctrine rv">
       <p>"Het Protocol is geen aanbeveling. Het is de operationele infrastructuur waarop cognitieve performance wordt gebouwd. <strong>Operators volgen het systeem. Het systeem levert de resultaten.</strong>"</p>
-    </div>
-  </div>
-</section>
-
-<!-- STANDARD-ISSUE STRIP -->
-<div class="stdissue">
-  <span><b>Standaard uitgifte</b> — geen onderdosering</span>
-  <span class="dot">·</span>
-  <span><b>Military-grade</b> formuleerdiscipline</span>
-  <span class="dot">·</span>
-  <span><b>Elke mg</b> verantwoord op het label</span>
-  <span class="dot">·</span>
-  <span><b>EU-conform</b> tot op de limiet</span>
-</div>
-
-<!-- OPERATOR CREED -->
-<section class="creed sec" id="creed">
-  <div class="creed-inner">
-    <div class="creed-panel rv">
-      <div class="creed-head">
-        <p class="creed-class">// Veld-Doctrine · Alleen voor Operators</p>
-        <h2 class="creed-h">De <em>Operator-Eed.</em></h2>
-      </div>
-      <div class="creed-list">
-        <div class="creed-line"><span class="creed-no">01</span><p class="creed-txt">Ik accepteer geen <strong>standaard die ik kan overtreffen.</strong> Goed genoeg is een keuze — en het is niet de mijne.</p></div>
-        <div class="creed-line"><span class="creed-no">02</span><p class="creed-txt">Ik koop geen hoop. Ik zet in op <strong>mechanismen die de literatuur dragen</strong> — in doseringen die effect produceren, niet doseringen die mooi staan op een label.</p></div>
-        <div class="creed-line"><span class="creed-no">03</span><p class="creed-txt">Ik behandel mijn cognitie als <strong>infrastructuur,</strong> niet als toeval. Slaap, training, voeding, biochemie — ik onderhoud het hele systeem of geen enkel deel.</p></div>
-        <div class="creed-line"><span class="creed-no">04</span><p class="creed-txt">Ik meet. Ik volg het protocol. Ik laat <strong>het bewijs het werk doen</strong> — en ik laat de mensen die het label niet lezen achter me.</p></div>
-        <div class="creed-line"><span class="creed-no">05</span><p class="creed-txt">Ik weet waar ik bij hoor. <strong>Dit is niet voor iedereen.</strong> Het is voor de uitzondering — en ik heb besloten de uitzondering te zijn.</p></div>
-      </div>
-      <p class="creed-sig">Wie dit leest en knikt — <span>is al een Operator.</span></p>
     </div>
   </div>
 </section>
@@ -834,9 +759,9 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <p class="lbl tl">// Mechanismen</p>
         <h2 class="why-h">Wetenschap.<br>Niet <em>marketing.</em></h2>
         <p class="why-body">
-          De meeste supplementen falen om één reden: ze doseren onder de drempel waarbij effecten optreden in de studies die ze zelf als bewijs aanvoeren. Elite Combat Pro is gebouwd op één principe — als de studie 1000 mg vereist voor een meetbaar effect, zit er 1000 mg in. Niet 200 mg met een goede verpakking eromheen.
+          De meeste supplementen falen om één reden: ze doseren onder de drempel waarbij effecten optreden in de studies die ze zelf als bewijs aanvoeren. Cogvivo Protocol is gebouwd op één principe — als de studie 1000 mg vereist voor een meetbaar effect, zit er 1000 mg in. Niet 200 mg met een goede verpakking eromheen.
           <br><br>
-          Elk mechanisme in de tabel hiernaast is gedocumenteerd in peer-reviewed humane trials. Geen dierenstudies. Geen celkweekculturen. Humane, gerandomiseerde data. Als het bewijs er niet is, zit het ingrediënt er niet in.
+          De mechanismen in de tabel hiernaast rusten op peer-reviewed onderzoek — met humane, gerandomiseerde trials als hoogste standaard en volledige transparantie over waar het bewijs sterker of dunner is. Geen verborgen doseringen, geen holle beloftes.
         </p>
       </div>
       <div class="why-table rv d2">
@@ -867,7 +792,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       </div>
       <div class="lex-item">
         <p class="lex-term">HET SYSTEEM</p>
-        <p class="lex-def">De volledige Elite Combat Pro-stack inclusief het dagelijkse doseringsprotocol. Niet een product op zichzelf — een operationeel kader voor systematische cognitieve optimalisatie.</p>
+        <p class="lex-def">De volledige Cogvivo Protocol-stack inclusief het dagelijkse doseringprotocol. Niet een product op zichzelf — een operationeel kader voor systematische cognitieve optimalisatie.</p>
       </div>
       <div class="lex-item">
         <p class="lex-term">ACTIVERING</p>
@@ -875,11 +800,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       </div>
       <div class="lex-item">
         <p class="lex-term">COGNITIEVE INFRASTRUCTUUR</p>
-        <p class="lex-def">De moleculaire basis waarop cognitieve performance rust — slaap, voeding, training én de biochemische laag die Elite Combat Pro levert. Alles tegelijk, of niet optimaal.</p>
+        <p class="lex-def">De moleculaire basis waarop cognitieve performance rust — slaap, voeding, training én de biochemische laag die Cogvivo Protocol levert. Alles tegelijk, of niet optimaal.</p>
       </div>
       <div class="lex-item">
-        <p class="lex-term">ERVARING</p>
-        <p class="lex-def">Een eerlijke gebruikerservaring die iemand deelt na minimaal 90 dagen op het volledige protocol. Geen betaalde review of marketingpraatje — gewoon feedback van mensen die de kuur echt hebben afgemaakt.</p>
+        <p class="lex-term">FIELD REPORT</p>
+        <p class="lex-def">Een geverifieerde gebruikerservaring na minimaal 90 dagen volledig protocol. Geen marketingtestimonial — operationele feedback van Operators uit het veld, ongefilterd.</p>
       </div>
       <div class="lex-item">
         <p class="lex-term">BASELINE</p>
@@ -889,38 +814,27 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="proof sec" id="proof">
+<!-- ONS WOORD (waarden-gedreven vertrouwen, geen verzonnen reviews) -->
+<section class="proof sec" id="belofte">
   <div class="inner">
     <div class="proof-head rv">
-      <p class="lbl gl" style="justify-content:center">// Geverifieerde Veldrapporten</p>
-      <h2 class="proof-h">Operators spreken.</h2>
-      <p class="proof-sub">Geverifieerde gebruikers · Minimaal 90 dagen protocol · Ongefilterde feedback</p>
+      <p class="lbl gl" style="justify-content:center">// Ons Woord</p>
+      <h2 class="proof-h">Wat wij beloven —<br>en wat niet.</h2>
+      <p class="proof-sub">Geen holle claims · Geen verborgen doseringen · Geen bewijs dat we niet hebben</p>
     </div>
+
     <div class="tc-grid">
       <div class="tc rv">
-        <p class="tc-tag">// REPORT-001 — GEVERIFIEERD</p>
-        <div class="tc-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="tc-q">"Ik heb alles geprobeerd — Mind Lab Pro, zelfgemaakte stacks, diverse peptides. Elite Combat Pro is het eerste product waarbij ik zowel de mechanismen doorgrond als meetbare resultaten zie. Werkgeheugen merkbaar verbeterd na zes weken. Dit is geen placebo."</p>
-        <p class="tc-name">M. van den Berg</p>
-        <p class="tc-role">Managing Partner — Venture Capital</p>
-        <p class="tc-dur">Protocol: 4 maanden · Volledige stack</p>
+        <p class="tc-tag">// Wij beloven</p>
+        <p class="tc-q">Elke milligram staat op het label. Elke dosering is te herleiden naar de studie waarop ze rust. Wat we niet kunnen onderbouwen, claimen we niet — en wat de EU niet toelaat, zit er niet in.</p>
       </div>
       <div class="tc rv d2">
-        <p class="tc-tag">// REPORT-002 — GEVERIFIEERD</p>
-        <div class="tc-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="tc-q">"Als neurowetenschapper was ik initieel sceptisch. De formulering is echter correct. Magtein op 2 gram, Cognizin op 500 mg, Bacopa correct gestandaardiseerd. Dit is wat de industrie al tien jaar had moeten produceren maar bewust niet doet."</p>
-        <p class="tc-name">Dr. S. Hartman</p>
-        <p class="tc-role">Neurowetenschapper — Amsterdam UMC</p>
-        <p class="tc-dur">Protocol: 7 maanden · Volledige stack</p>
+        <p class="tc-tag">// Wij beloven niet</p>
+        <p class="tc-q">Geen wondermiddel, geen resultaat over nacht, geen genezing. Neuroplasticiteit werkt over weken, niet over uren. Wie een snelle kick zoekt, is bij ons aan het verkeerde adres — en dat zeggen we liever vooraf.</p>
       </div>
       <div class="tc rv d4">
-        <p class="tc-tag">// REPORT-003 — GEVERIFIEERD</p>
-        <div class="tc-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <p class="tc-q">"Vijf maanden in. Aanhoudende focus, aanzienlijk minder cognitieve vermoeidheid na 14-urige werkdagen. Ik beschouw Elite Combat Pro als cognitieve infrastructuur — net zoals ik slaap en training niet oversta, sla ik dit niet over."</p>
-        <p class="tc-name">T. Kremers</p>
-        <p class="tc-role">Oprichter en CEO — SaaS Scale-up</p>
-        <p class="tc-dur">Protocol: 5 maanden · Volledige stack</p>
+        <p class="tc-tag">// Waarom dat telt</p>
+        <p class="tc-q">Een merk dat je alles belooft, kun je niets toevertrouwen. Wij bouwen voor de lange termijn: mensen die het label lezen, de dosering narekenen, en blijven omdat het klopt — niet omdat we het mooi verkochten.</p>
       </div>
     </div>
   </div>
@@ -933,14 +847,14 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       <p class="lbl gl" style="justify-content:center">// Stack Vergelijking</p>
       <h2 class="compare-h">Vergelijk de<br><em>doseringen zelf.</em></h2>
       <p class="compare-claim">Verifieerbaar. Transparant. Gebaseerd op publiek beschikbare labeldata.</p>
-      <p class="compare-sub">Alle onderstaande doseringen zijn afkomstig van openbaar gepubliceerde productlabels. Wij maken geen medische claims over andere producten — alleen over wat er op hun eigen label staat.</p>
+      <p class="compare-sub">Cijfers zijn indicatief en gebaseerd op openbaar gepubliceerde productlabels; controleer altijd het actuele label van elk product. Wij maken geen medische claims over andere merken — we vergelijken uitsluitend openbare doseringsinformatie. Merknamen zijn eigendom van hun respectieve houders.</p>
     </div>
     <div class="ct-wrap rv">
       <table class="ct-table">
         <thead>
           <tr>
             <th class="ct-col-label">Criterium</th>
-            <th class="ct-col-us">Elite Combat Pro<span class="ct-brand-sub">by Cogvivo</span></th>
+            <th class="ct-col-us">Cogvivo Protocol<span class="ct-brand-sub">by Cogvivo</span></th>
             <th class="ct-col-other">Mind Lab Pro®<span class="ct-brand-sub">Opti-Nutra</span></th>
             <th class="ct-col-other">Qualia Mind®<span class="ct-brand-sub">Neurohacker</span></th>
             <th class="ct-col-other">Alpha Brain®<span class="ct-brand-sub">Onnit</span></th>
@@ -976,8 +890,8 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
             <td><span class="ct-mid">~ 100 mg</span><span class="ct-note">Onder therapeutische drempel</span></td>
           </tr>
           <tr>
-            <td><span class="ct-crit">DHA + EPA Omega-3</span><span class="ct-crit-sub">Essentieel voor cerebrale membraanintegriteit</span></td>
-            <td class="ct-col-us"><span class="ct-yes">✓ 800 mg algenolie</span><span class="ct-note">Vegan · maximale biobeschikbaarheid</span></td>
+            <td><span class="ct-crit">DHA (omega-3)</span><span class="ct-crit-sub">Essentieel voor cerebrale membraanintegriteit</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ DHA ≥250 mg</span><span class="ct-note">Algenolie · vegan · EFSA-hersenclaim</span></td>
             <td><span class="ct-no">✕ Afwezig</span><span class="ct-note">Niet in formulering</span></td>
             <td><span class="ct-no">✕ Afwezig</span><span class="ct-note">Niet in formulering</span></td>
             <td><span class="ct-no">✕ Afwezig</span><span class="ct-note">Niet in formulering</span></td>
@@ -998,7 +912,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
           </tr>
           <tr>
             <td><span class="ct-crit">Totaal actieve compounds</span><span class="ct-crit-sub">Klinisch gedoseerde ingrediënten</span></td>
-            <td class="ct-col-us"><span class="ct-val-us">41</span><span class="ct-note">Volledig gedoseerd</span></td>
+            <td class="ct-col-us"><span class="ct-val-us">35</span><span class="ct-note">Volledig gedoseerd</span></td>
             <td><span class="ct-val-neu">11</span><span class="ct-note">Volledig gedoseerd</span></td>
             <td><span class="ct-val-neu">28</span><span class="ct-note">Deels onderdoseerd</span></td>
             <td><span class="ct-val-neu">13</span><span class="ct-note">Deels proprietary blend</span></td>
@@ -1006,26 +920,27 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         </tbody>
       </table>
     </div>
-    <div class="ct-scores rv">
-      <div class="ct-score ct-score-us">
-        <span class="ct-score-name">Elite Combat Pro</span>
-        <div class="ct-score-wrap"><div class="ct-score-bar" data-w="94"></div></div>
-        <span class="ct-score-val">94<span style="font-size:18px;color:var(--t3)">/100</span></span>
+    <div class="compare-claim" style="text-align:center;margin-top:40px;">Wij publiceren elke milligram. Dat is de hele vergelijking.</div>
+
+    <div class="ev-card rv" style="margin-top:56px;max-width:920px;margin-left:auto;margin-right:auto;">
+      <div class="ev-head">
+        <span class="ev-head-lbl">// EU-conform vanaf het ontwerp</span>
+        <span class="ev-head-id">FEITELIJK</span>
       </div>
-      <div class="ct-score">
-        <span class="ct-score-name">Mind Lab Pro®</span>
-        <div class="ct-score-wrap"><div class="ct-score-bar" data-w="62"></div></div>
-        <span class="ct-score-val">62<span style="font-size:18px;color:var(--t3)">/100</span></span>
-      </div>
-      <div class="ct-score">
-        <span class="ct-score-name">Qualia Mind®</span>
-        <div class="ct-score-wrap"><div class="ct-score-bar" data-w="71"></div></div>
-        <span class="ct-score-val">71<span style="font-size:18px;color:var(--t3)">/100</span></span>
-      </div>
-      <div class="ct-score">
-        <span class="ct-score-name">Alpha Brain®</span>
-        <div class="ct-score-wrap"><div class="ct-score-bar" data-w="44"></div></div>
-        <span class="ct-score-val">44<span style="font-size:18px;color:var(--t3)">/100</span></span>
+      <div class="ev-body">
+        <p class="ev-sub">Waarom een deel van de populaire nootropics de EU niet in mag</p>
+        <p style="font-size:13px;font-weight:300;color:var(--t2);line-height:1.9;letter-spacing:.04em;">
+          Veel bekende formules komen uit de VS, waar andere regels gelden. Sommige populaire nootropics — waaronder <strong style="color:var(--t1);font-weight:600;">Qualia Mind</strong> — bevatten ingrediënten die in de EU niet als voedingssupplement zijn toegelaten. Wij hebben die bewust nooit gebruikt.
+        </p>
+        <div class="ev-div"></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Alpha-GPC</strong> — geen EU novel-food-toelating; in meerdere lidstaten als geneesmiddel geclassificeerd</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Huperzine A</strong> (uit Huperzia serrata) — in de EU als geneesmiddel behandeld, niet toegestaan als supplement</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Sabroxy®</strong> (Oroxylum indicum) — geen aantoonbare EU novel-food-autorisatie</span></div>
+        <div class="ev-div"></div>
+        <div class="vr ok"><div class="vi">✓</div><span class="vt">Cogvivo is volledig binnen de EU novel-food-wetgeving samengesteld — elke stof toetsbaar</span></div>
+        <p style="font-size:9px;color:var(--t4);letter-spacing:.05em;line-height:1.6;margin-top:8px;">
+          Op basis van openbaar gepubliceerde productlabels (stand: 2026) en de EU novel-food-catalogus. Controleer altijd het actuele label; formules kunnen wijzigen. Merknamen zijn eigendom van hun respectieve houders. Dit is een feitelijke vergelijking, geen medische claim.
+        </p>
       </div>
     </div>
   </div>
@@ -1036,7 +951,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   <div class="optin-inner rv">
     <p class="lbl tl" style="justify-content:center">// Intelligence Briefing</p>
     <h2 class="optin-h">40 pagina's wetenschap.<br><em>Gratis. Geen verplichtingen.</em></h2>
-    <p class="optin-sub">Het volledige wetenschappelijke onderbouwingsdocument van Elite Combat Pro. Elke studie. Elk mechanisme. Elke dosering met de bijbehorende humane trials. Geen marketingtekst — de primaire literatuur, toegankelijk gemaakt.</p>
+    <p class="optin-sub">Het volledige wetenschappelijke onderbouwingsdocument van Cogvivo Protocol. Elke studie. Elk mechanisme. Elke dosering met de bijbehorende humane trials. Geen marketingtekst — de primaire literatuur, toegankelijk gemaakt.</p>
     <div class="optin-form">
       <input type="email" class="optin-input" placeholder="jouw@emailadres.nl">
       <button class="optin-btn">▸ Ontvang Briefing</button>
@@ -1048,17 +963,17 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 <!-- PRICING -->
 <section class="pricing sec" id="pricing">
   <div class="pricing-inner">
-    <p class="lbl tl rv" style="justify-content:center">// Activering</p>
+    <p class="lbl tl rv" style="justify-content:center">// Begin Vandaag</p>
     <h2 class="price-h rv">Jouw<br><em>Eerste Bestelling.</em></h2>
-    <p class="price-sub rv">Elite Combat Pro is beschikbaar voor Operators die cognitieve optimalisatie serieus nemen. Bestel vandaag — eerste levering binnen 3–5 werkdagen.</p>
+    <p class="price-sub rv">Cogvivo Protocol is beschikbaar voor Operators die cognitieve optimalisatie serieus nemen. Bestel vandaag — eerste levering binnen 3–5 werkdagen.</p>
 
     <div class="exclusion-block rv">
       <p>Dit protocol is <strong>niet voor iedereen.</strong> Het is voor Operators — degenen die cognitie serieus behandelen als operationeel voordeel, niet als supplementatie. Als de prijs je voornaamste overweging is, is dit protocol <em>niet voor jou.</em> Als je begrijpt wat je daarvoor terugkrijgt, lees dan verder.</p>
     </div>
 
     <div class="anchor rv">
-      <span class="anchor-lbl">De 41 merkingrediënten los kopen — Magtein®, Niagen®, Creapure®, Synapsa® en de rest</span>
-      <span class="anchor-note">Los kost dat een veelvoud per maand — en je maakt de meeste potten nooit leeg</span>
+      <span class="anchor-lbl">35 branded ingrediënten los kopen — Magtein®, Niagen®, Creapure®, Synapsa® en de rest</span>
+      <span class="anchor-note">Kost een veelvoud per maand — en het meeste raakt nooit op</span>
     </div>
 
     <div class="scarcity rv">
@@ -1073,11 +988,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 
     <div class="price-card rv">
       <div class="pc-bg">ECP</div>
-      <span class="pc-tag">Elite Combat Pro — Volledige Stack</span>
+      <span class="pc-tag">Cogvivo Protocol — Volledige Stack</span>
       <div class="pc-price"><sup>€</sup>129</div>
       <p class="pc-period">Premium starter-doos · Eenmalig · 30 dagen</p>
       <ul class="pc-feats">
-        <li>41 klinisch gedoseerde ingrediënten — volledige formule</li>
+        <li>35 klinisch gedoseerde ingrediënten — volledige formule</li>
         <li>AM/PM circadiaan systeem · premium magnetische box</li>
         <li>EU-conform — alle ingrediënten op EU-wetgeving getoetst</li>
         <li>100% transparant label — elke mg zichtbaar</li>
@@ -1085,20 +1000,13 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
         <li>Gratis verzending binnen Nederland en België</li>
         <li>Directe toegang tot het Operator-netwerk</li>
       </ul>
-      <div style="background:#24bca8;padding:20px 28px;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.2em;color:#020408;text-align:center;cursor:pointer;margin-bottom:14px;" onclick="window.location='#'">Activeer Protocol ▸</div>
+      <div style="background:#24bca8;padding:20px 28px;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:.2em;color:#020408;text-align:center;cursor:pointer;margin-bottom:14px;" onclick="window.location='#'">Begin Vandaag ▸</div>
       <div style="text-align:center;">
-        <span class="guarantee-mini">60-Dagen Garantie · Niet tevreden = volledige terugbetaling zonder vragen</span>
+        <span class="guarantee-mini">Volledig transparant label · Wettelijk 14 dagen bedenktijd conform EU-recht</span>
       </div>
       <p class="pc-note">Eerste levering binnen 3–5 werkdagen · Daarna automatisch maandelijks · Op elk moment opzegbaar</p>
     </div>
 
-    <div class="guarantee rv">
-      <div class="guar-icon">◈</div>
-      <div>
-        <p class="guar-title">60-Dagen Cognitieve Garantie</p>
-        <p class="guar-body">Volg het protocol 60 dagen aaneengesloten. Niet tevreden na 60 dagen aaneengesloten gebruik? Ontvang het volledige aankoopbedrag terug. Geen vragen. Geen formulieren. Geen gedoe.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1106,14 +1014,13 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 <section class="final sec">
   <div class="final-bg">COGVIVO</div>
   <div class="final-inner">
-    <p class="mil-eyebrow rv" style="margin:0 auto 24px;">Laatste briefing</p>
     <h2 class="final-h rv">
       <span class="final-pre">Smart people</span>
       <em>already know.</em>
     </h2>
-    <p class="final-sub rv">De vraag is niet óf cognitieve optimalisatie werkt. De wetenschap heeft dat allang beantwoord. De vraag is aan welke kant van de lijn jij staat: bij de mensen die hopen dat iets werkt — of bij de Operators die het systeem volgen. Eén beslissing scheidt de twee. Vandaag is die beslissing.</p>
-    <a href="#pricing" class="btn-main rv" style="display:inline-block;font-size:17px;padding:20px 60px;text-align:right;">
-      Word een Operator ▸
+    <p class="final-sub rv">De vraag is niet of cognitieve optimalisatie mogelijk is. De wetenschap heeft dat allang beantwoord. De vraag is of jij het serieus genoeg neemt om het te doen — en of je er vroeg genoeg bij bent.</p>
+    <a href="#pricing" class="btn-main rv" style="display:inline-block;font-size:17px;padding:20px 60px;text-align:center;">
+      Begin Vandaag ▸
     </a>
   </div>
 </section>
@@ -1137,7 +1044,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
       Dit product is een voedingssupplement en geen geneesmiddel &nbsp;·&nbsp; Niet bedoeld als vervanging voor een gevarieerde en evenwichtige voeding en een gezonde levensstijl<br>
       De aanbevolen dagelijkse hoeveelheid niet overschrijden &nbsp;·&nbsp; Buiten bereik van kinderen bewaren<br>
       Raadpleeg een arts bij zwangerschap, borstvoeding of medicijngebruik &nbsp;·&nbsp; Vegan · glutenvrij · sojavrij · Niet geschikt onder 18 jaar<br>
-      Gezondheidsclaims zijn gebaseerd op erkende EFSA-opinies conform Verordening (EG) nr. 1924/2006
+      Alleen erkende EFSA-gezondheidsclaims worden gevoerd, conform Verordening (EG) nr. 1924/2006. Dit product diagnosticeert, behandelt of geneest geen ziekten. Genoemde mechanismen zijn wetenschappelijke achtergrond, geen gezondheidsclaim.
     </p>
   </div>
 </footer>
