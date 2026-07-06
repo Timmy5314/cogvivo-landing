@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cogvivo — 35 ingredients. 14 mechanisms. One system.</title>
+<meta name="description" content="Cogvivo — 35 clinically dosed ingredients across 14 neurobiological mechanisms. Fully EU-compliant. Radical formula transparency.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cogvivo.com/">
+<meta property="og:title" content="Cogvivo — 35 ingredients. 14 mechanisms. One system.">
+<meta property="og:description" content="35 klinisch gedoseerde ingrediënten. Volledige formuletransparantie. EU-compliant.">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="nl_NL">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050810'/%3E%3Crect x='1.5' y='1.5' width='61' height='61' rx='12.5' fill='none' stroke='%231aa28a' stroke-opacity='0.5' stroke-width='1.5'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%2324bca8' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,700&family=Bebas+Neue&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+:root{
+  --black:#020408;
+  --dark:#050810;
+  --mid:#090d1a;
+  --panel:#0d1222;
+  --t1:#eceae3;
+  --t2:#c9d6e2;
+  --t3:#b9c8d6;
+  --t4:#96a7b5;
+  --gold:#c8a44a;
+  --goldhi:#e0c06e;
+  --teal:#1aa28a;
+  --tealhi:#24bca8;
+}
+
+body{
+  background:var(--black);
+  color:var(--t1);
+  font-family:'DM Mono',monospace;
+  overflow-x:hidden;
+}
+
+/* CURSOR */
+#CUR{position:fixed;width:6px;height:6px;background:var(--tealhi);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:width .15s,height .15s;display:none;}
+@media (hover:hover) and (pointer:fine){#CUR{display:block;}}
+#CURR{position:fixed;width:30px;height:30px;border:1px solid rgba(26,162,138,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);display:none;}
+@media (hover:hover) and (pointer:fine){#CURR{display:block;}}
+body.hl #CUR{width:42px;height:42px;background:transparent;border:1px solid var(--tealhi);border-radius:50%;}
+body.hl #CURR{opacity:0;}
+
+/* GRAIN */
+.grain{position:fixed;inset:-50%;width:200%;height:200%;z-index:1;pointer-events:none;opacity:.013;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 22s steps(4) infinite;}
+@keyframes grain{0%,100%{transform:translate(0,0)}25%{transform:translate(-1%,-2%)}50%{transform:translate(2%,1%)}75%{transform:translate(-1%,2%)}}
+
+body::after{content:'';position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.015) 3px,rgba(0,0,0,.015) 4px);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:62px;display:flex;align-items:center;padding:0 60px;transition:background .5s,border-bottom .5s;}
+nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1);backdrop-filter:blur(24px);}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--t1);}
+.nav-brand em{font-style:normal;color:var(--tealhi);}
+.nav-links{display:flex;gap:28px;list-style:none;margin-left:auto;}
+.nav-links a{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#7a9aaa;text-decoration:none;transition:color .3s;}
+.nav-links a:hover{color:var(--tealhi);}
+.nav-cta{margin-left:24px;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.2em;color:var(--black);background:var(--tealhi);padding:9px 24px;text-decoration:none;
+  clip-path:polygon(8px 0%,100% 0%,100% calc(100% - 8px),calc(100% - 8px) 100%,0% 100%,0% 8px);
+  border:1px solid var(--tealhi);transition:background .3s,color .3s;}
+.nav-cta:hover{background:transparent;color:var(--tealhi);}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;overflow:visible;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 60px 80px;}
+.brk{position:absolute;width:44px;height:44px;border-color:rgba(26,162,138,.18);border-style:solid;}
+.brk.tl{top:78px;left:60px;border-width:2px 0 0 2px;}
+.brk.tr{top:78px;right:60px;border-width:2px 2px 0 0;}
+.brk.bl{bottom:24px;left:60px;border-width:0 0 2px 2px;}
+.brk.br{bottom:24px;right:60px;border-width:0 2px 2px 0;}
+
+.htb{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:48px;font-size:8px;letter-spacing:.38em;text-transform:uppercase;opacity:0;animation:fadeUp .7s ease .1s forwards;}
+.htb-item{color:var(--tealhi);display:flex;align-items:center;gap:8px;}
+.htb-dot{width:5px;height:5px;border-radius:50%;background:var(--tealhi);animation:pulse 2.4s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(26,162,138,.5)}60%{opacity:.4;box-shadow:0 0 0 8px transparent}}
+.htb-sep{color:var(--t4);}
+
+.hero-crest-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:30px;opacity:0;animation:fadeUp .8s ease .05s forwards;}
+.hero-logo{width:min(360px,78vw);height:auto;filter:drop-shadow(0 10px 32px rgba(0,0,0,.6));}
+.logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,8vw,84px);font-weight:700;letter-spacing:.14em;color:var(--t1);line-height:1;}
+.logo-wordmark span{color:var(--tealhi);}
+.hero-crest-tag{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.5em;text-transform:uppercase;color:var(--goldhi);padding-left:.5em;}
+.slogan-wrap{margin-bottom:36px;opacity:0;animation:fadeUp .9s ease .3s forwards;width:100%;max-width:900px;}
+.slogan{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,88px);font-weight:700;line-height:1.05;letter-spacing:.03em;color:var(--t1);display:block;padding:0 10px;}
+.slogan-dots{color:var(--goldhi);}
+
+.hero-claim{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,24px);font-weight:300;font-style:italic;color:var(--t2);letter-spacing:.05em;line-height:1.6;margin-bottom:12px;max-width:680px;opacity:0;animation:fadeUp .8s ease .5s forwards;}
+.hero-sub{font-size:11px;letter-spacing:.16em;color:var(--t4);text-transform:uppercase;margin-bottom:44px;opacity:0;animation:fadeUp .8s ease .65s forwards;}
+
+.hero-ctas{display:flex;gap:14px;align-items:center;opacity:0;animation:fadeUp .8s ease .8s forwards;}
+.btn-main{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.25em;color:var(--black);background:var(--tealhi);padding:17px 38px;text-decoration:none;display:inline-block;
+  clip-path:polygon(12px 0%,100% 0%,100% calc(100% - 12px),calc(100% - 12px) 100%,0% 100%,0% 12px);
+  border:1px solid var(--tealhi);transition:background .3s,color .3s;}
+.btn-main:hover{background:transparent;color:var(--tealhi);}
+.btn-main.btn-blok{display:block;text-align:right;}
+.btn-wrap-right{display:flex;justify-content:flex-end;width:100%;}
+.btn-alt{font-size:10px;letter-spacing:.22em;color:var(--t3);text-decoration:none;border:1px solid rgba(255,255,255,.08);padding:17px 26px;transition:color .3s,border-color .3s;}
+.btn-alt:hover{color:var(--tealhi);border-color:rgba(26,162,138,.3);}
+
+.hero-guar{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(26,162,138,.18);padding:9px 20px;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--tealhi);margin-top:24px;opacity:0;animation:fadeUp .8s ease 1s forwards;}
+.hero-guar::before{content:'◈';font-size:10px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* VERLIES BANNER */
+.loss-banner{background:rgba(6,10,18,1);border-top:1px solid rgba(140,32,32,.18);border-bottom:1px solid rgba(140,32,32,.18);padding:28px 60px;text-align:center;}
+.loss-banner p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,26px);font-weight:400;font-style:italic;color:rgba(220,200,180,.55);letter-spacing:.05em;}
+.loss-banner strong{color:var(--t1);font-style:normal;font-weight:600;}
+
+/* TRUST STRIP */
+.trust-strip{display:flex;justify-content:center;gap:0;background:var(--dark);border-top:1px solid rgba(26,162,138,.08);border-bottom:1px solid rgba(26,162,138,.08);}
+.ts{padding:28px 44px;display:flex;flex-direction:column;align-items:center;gap:8px;border-right:1px solid rgba(255,255,255,.04);}
+.ts:last-child{border-right:none;}
+.ts-val{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;line-height:1;}
+.ts-lbl{font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--t4);text-align:center;}
+.c-t{color:var(--tealhi);}
+.c-g{color:var(--goldhi);}
+.c-w{color:var(--t1);}
+
+/* TICKER */
+.ticker{overflow:hidden;background:rgba(2,6,10,.96);border-top:1px solid rgba(26,162,138,.1);border-bottom:1px solid rgba(26,162,138,.1);padding:14px 0;white-space:nowrap;}
+.ticker-inner{display:inline-flex;gap:48px;animation:tick 38s linear infinite;}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti{font-size:8px;letter-spacing:.28em;text-transform:uppercase;}
+.ti.r{color:rgba(26,162,138,.45);}
+.ti.g{color:rgba(200,164,72,.4);}
+
+/* SECTION HELPERS */
+.sec{position:relative;z-index:3;}
+.inner{max-width:1240px;margin:0 auto;}
+.lbl{display:flex;align-items:center;gap:12px;font-size:7px;letter-spacing:.45em;text-transform:uppercase;margin-bottom:20px;}
+.lbl::before{content:'▸';}
+.tl{color:var(--tealhi);}
+.gl{color:var(--goldhi);}
+
+/* SCROLL REVEAL */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease;}
+.rv.in{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* MANIFESTO */
+.manifesto{padding:140px 60px;background:var(--mid);}
+.man-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.man-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,78px);font-weight:700;line-height:.9;color:var(--t1);margin-bottom:28px;}
+.man-h em{font-style:italic;color:var(--goldhi);}
+.man-body{font-size:15px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;margin-bottom:32px;}
+.enemy-bar{background:rgba(5,8,16,.98);border-left:3px solid rgba(140,32,32,.45);padding:22px 28px;margin-top:32px;}
+.enemy-bar p{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.6vw,20px);font-weight:300;font-style:italic;color:rgba(200,180,160,.65);letter-spacing:.04em;line-height:1.75;}
+.enemy-bar strong{color:var(--t1);font-style:italic;font-weight:600;}
+
+/* EV CARD */
+.ev-card{background:var(--dark);border:1px solid rgba(26,162,138,.14);overflow:hidden;}
+.ev-head{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.1);}
+.ev-head-lbl{font-size:7px;letter-spacing:.28em;color:var(--tealhi);text-transform:uppercase;}
+.ev-head-id{font-size:7px;letter-spacing:.2em;color:var(--goldhi);text-transform:uppercase;}
+.ev-body{padding:28px 22px;display:flex;flex-direction:column;gap:14px;}
+.ev-sub{font-size:10px;letter-spacing:.15em;color:#8ab8cc;text-transform:uppercase;margin-bottom:6px;}
+.ev-div{height:1px;background:rgba(255,255,255,.06);margin:6px 0;}
+.vr{display:flex;align-items:center;gap:14px;}
+.vi{width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0;}
+.vr.ok .vi{color:var(--tealhi);border:1px solid rgba(26,162,138,.3);}
+.vr.no .vi{color:rgba(200,80,80,.7);border:1px solid rgba(140,32,32,.3);}
+.vt{font-size:12px;font-weight:300;color:var(--t2);letter-spacing:.04em;}
+.vr.no .vt{color:var(--t3);}
+
+/* ORIGIN */
+.origin{padding:140px 60px;background:var(--black);position:relative;overflow:hidden;}
+.origin::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(26,162,138,.25),transparent);}
+.origin-inner{max-width:820px;margin:0 auto;}
+.origin-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:rgba(26,162,138,.45);margin-bottom:48px;display:flex;align-items:center;gap:14px;}
+.origin-label::after{content:'';flex:1;height:1px;background:rgba(26,162,138,.1);}
+.origin-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,64px);font-weight:700;line-height:1;color:var(--t1);margin-bottom:48px;}
+.origin-h em{font-style:italic;color:var(--goldhi);}
+.origin-body{font-size:16px;font-weight:300;color:var(--t2);line-height:2.1;letter-spacing:.04em;border-left:2px solid rgba(26,162,138,.12);padding-left:36px;}
+.origin-body p{margin-bottom:26px;}
+.origin-body p:last-child{margin-bottom:0;}
+.origin-sig{margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:20px;}
+.origin-sig-line{width:40px;height:1px;background:rgba(26,162,138,.25);}
+.origin-sig-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;font-style:italic;color:var(--t1);letter-spacing:.06em;}
+.origin-sig-title{font-size:7px;letter-spacing:.3em;color:var(--tealhi);text-transform:uppercase;margin-top:4px;}
+
+/* WHO */
+.who{padding:140px 60px;background:var(--mid);}
+.who-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5.5vw,84px);font-weight:700;line-height:.9;color:var(--t1);text-align:center;margin-bottom:14px;}
+.who-h em{font-style:italic;color:var(--tealhi);}
+.who-sub{font-size:13px;font-weight:300;color:var(--t3);text-align:center;letter-spacing:.1em;margin-bottom:64px;}
+.go-stack{display:flex;flex-direction:column;gap:2px;margin-bottom:2px;}
+.go-card{background:var(--dark);padding:32px 36px;display:grid;grid-template-columns:52px 1fr 32px;gap:24px;align-items:center;transition:background .3s;border-left:3px solid transparent;transition:border-left-color .3s,background .3s;}
+.go-card:hover{background:var(--panel);border-left-color:var(--tealhi);}
+.go-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:rgba(26,162,138,.18);line-height:1;}
+.go-body h3{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--t1);margin-bottom:8px;}
+.go-body p{font-size:13px;font-weight:300;color:var(--t2);line-height:1.85;letter-spacing:.04em;}
+.go-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;color:var(--tealhi);border:1px solid rgba(26,162,138,.25);padding:3px 10px;display:inline-block;margin-bottom:10px;}
+.go-arr{font-size:18px;color:rgba(26,162,138,.25);}
+.stop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;}
+.stop-card{background:rgba(8,12,20,.9);border-top:2px solid rgba(140,32,32,.15);padding:32px 28px;}
+.stop-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--t2);margin-bottom:10px;margin-top:12px;}
+.stop-card p{font-size:12px;font-weight:300;color:var(--t3);line-height:1.8;letter-spacing:.04em;}
+.stop-badge{font-size:7px;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,80,80,.6);border:1px solid rgba(140,32,32,.2);padding:3px 10px;}
+
+/* INGREDIENTS */
+.ingredients{padding:140px 60px;background:var(--dark);}
+.ing-intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:72px;}
+.ing-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,78px);font-weight:700;line-height:.9;color:var(--t1);}
+.ing-h em{font-style:italic;color:var(--goldhi);}
+.ing-body{font-size:14px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;}
+.tier{margin-bottom:36px;}
+.tier-bar{display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;border-left:3px solid;}
+.t1 .tier-bar{border-left-color:var(--goldhi);background:rgba(200,164,72,.04);}
+.t2 .tier-bar{border-left-color:var(--teal);background:rgba(26,162,138,.03);}
+.t-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid;font-family:'DM Mono',monospace;}
+.t1 .t-badge{color:var(--goldhi);border-color:rgba(200,164,72,.35);}
+.t2 .t-badge{color:var(--tealhi);border-color:rgba(26,162,138,.28);}
+.t-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
+.ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.ic{background:var(--mid);padding:22px 20px;position:relative;transition:background .3s;}
+.ic::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;transform:scaleY(0);transition:transform .32s;transform-origin:bottom;}
+.t1 .ic::before{background:var(--goldhi);}
+.t2 .ic::before{background:var(--tealhi);}
+.ic:hover{background:var(--panel);}
+.ic:hover::before{transform:scaleY(1);}
+.ic-name{font-size:12px;font-weight:400;letter-spacing:.07em;color:var(--t1);margin-bottom:2px;}
+.ic-brand{font-size:7px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
+.ic-dose{font-size:9px;color:var(--tealhi);letter-spacing:.1em;}
+.ic-mech{font-size:11px;font-weight:300;color:#bccbd8;margin-top:6px;line-height:1.55;letter-spacing:.04em;}
+.ic-ev{display:flex;align-items:center;gap:7px;margin-top:10px;}
+.ev-bar{flex:1;height:2px;background:rgba(255,255,255,.06);border-radius:1px;overflow:hidden;}
+.ev-fill{height:100%;width:0;border-radius:1px;transition:width 1.4s cubic-bezier(.16,1,.3,1);}
+.t1 .ev-fill{background:linear-gradient(90deg,rgba(200,164,72,.5),var(--goldhi));}
+.t2 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.5),var(--tealhi));}
+.ev-pct{font-size:9px;color:#bccbd8;}
+.tier3-bar{border-left:3px solid rgba(26,162,138,.2);background:rgba(26,162,138,.02);display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;}
+.tier3-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:var(--t3);font-family:'DM Mono',monospace;}
+.tier3-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
+.tier3 .ic::before{background:rgba(26,162,138,.3);}
+.tier3 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.3),rgba(26,162,138,.6));}
+
+/* PROTOCOL / RITUAL */
+.ritual{padding:140px 60px;background:var(--mid);}
+.ritual-inner{max-width:1100px;margin:0 auto;}
+.ritual-header{text-align:center;margin-bottom:72px;}
+.ritual-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,78px);font-weight:700;line-height:.92;color:var(--t1);margin-bottom:14px;}
+.ritual-h em{font-style:italic;color:var(--tealhi);}
+.ritual-sub{font-size:12px;font-weight:300;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;}
+.ritual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;}
+.ritual-step{background:var(--dark);padding:36px 28px;position:relative;border-top:2px solid rgba(26,162,138,.1);transition:border-top-color .4s,background .4s;}
+.ritual-step:hover{background:var(--panel);border-top-color:var(--tealhi);}
+.ritual-time{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--tealhi);letter-spacing:.08em;display:block;margin-bottom:10px;}
+.ritual-step-label{font-size:7px;letter-spacing:.3em;text-transform:uppercase;color:var(--goldhi);margin-bottom:14px;display:block;}
+.ritual-step h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--t1);margin-bottom:10px;}
+.ritual-step p{font-size:12px;font-weight:300;color:var(--t2);line-height:1.85;letter-spacing:.04em;}
+.ritual-step-num{position:absolute;bottom:18px;right:18px;font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:rgba(26,162,138,.04);line-height:1;pointer-events:none;}
+.ritual-doctrine{background:var(--dark);border:1px solid rgba(26,162,138,.1);padding:32px 44px;text-align:center;clip-path:polygon(16px 0%,100% 0%,100% calc(100% - 16px),calc(100% - 16px) 100%,0% 100%,0% 16px);}
+.ritual-doctrine p{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,2vw,22px);font-weight:300;font-style:italic;color:#8aafc0;letter-spacing:.07em;line-height:1.85;}
+.ritual-doctrine strong{color:var(--t1);font-style:italic;font-weight:600;}
+
+/* WHY IT WORKS */
+.why{padding:140px 60px;background:var(--black);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:88px;align-items:start;}
+.why-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,76px);font-weight:700;line-height:.92;color:var(--t1);margin-bottom:28px;}
+.why-h em{font-style:italic;color:var(--goldhi);}
+.why-body{font-size:15px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;}
+.why-table{background:var(--mid);border:1px solid rgba(26,162,138,.12);overflow:hidden;}
+.wt-head{display:grid;grid-template-columns:1.2fr 1fr 1fr;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.12);padding:12px 20px;font-size:7px;letter-spacing:.28em;text-transform:uppercase;color:var(--tealhi);}
+.wt-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.04);font-size:13px;font-weight:300;letter-spacing:.04em;color:#9ab8c8;transition:background .3s;align-items:center;}
+.wt-row:last-child{border-bottom:none;}
+.wt-row:hover{background:rgba(26,162,138,.04);}
+.wt-gold{color:var(--goldhi);font-size:12px;}
+.wt-teal{color:var(--tealhi);font-size:12px;}
+
+/* LEXICON */
+.lexicon{padding:100px 60px;background:var(--mid);}
+.lexicon-inner{max-width:1100px;margin:0 auto;}
+.lex-header{text-align:center;margin-bottom:56px;}
+.lex-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,58px);font-weight:700;color:var(--t1);}
+.lex-h em{font-style:italic;color:var(--goldhi);}
+.lex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.lex-item{background:var(--dark);padding:28px 26px;border-bottom:2px solid rgba(26,162,138,.08);transition:border-bottom-color .4s;}
+.lex-item:hover{border-bottom-color:var(--tealhi);}
+.lex-term{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:.22em;color:var(--tealhi);margin-bottom:8px;}
+.lex-def{font-size:12px;font-weight:300;color:var(--t2);line-height:1.8;letter-spacing:.04em;}
+
+/* TESTIMONIALS */
+.proof{padding:140px 60px;background:var(--dark);}
+.proof-head{text-align:center;margin-bottom:72px;}
+.proof-h{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,78px);font-weight:700;font-style:italic;color:var(--t1);margin-bottom:12px;}
+.proof-sub{font-size:8px;letter-spacing:.22em;color:#8aaabb;text-transform:uppercase;}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.tc{background:var(--mid);padding:44px 36px;position:relative;border-top:2px solid transparent;transition:border-top-color .4s,transform .4s;}
+.tc:hover{border-top-color:var(--gold);transform:translateY(-5px);}
+.tc-tag{font-size:7px;letter-spacing:.28em;color:#7a9eb0;text-transform:uppercase;margin-bottom:16px;}
+.tc-stars{display:flex;gap:3px;margin-bottom:18px;}
+.star{color:var(--goldhi);font-size:11px;}
+.tc-q{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;font-style:italic;color:#e8e4dc;line-height:1.9;margin-bottom:32px;position:relative;z-index:1;}
+.tc-q::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:150px;color:rgba(200,164,72,.04);position:absolute;top:-24px;left:-12px;line-height:1;pointer-events:none;}
+.tc-name{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--t1);}
+.tc-role{font-size:7px;letter-spacing:.16em;color:var(--goldhi);margin-top:4px;}
+.tc-dur{font-size:7px;letter-spacing:.14em;color:#7a9aaa;margin-top:4px;}
+
+/* VERGELIJKING */
+.compare{padding:140px 60px;background:var(--black);}
+.compare-header{text-align:center;margin-bottom:64px;}
+.compare-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,68px);font-weight:700;line-height:.95;color:var(--t1);margin-bottom:14px;}
+.compare-h em{font-style:italic;color:var(--goldhi);}
+.compare-claim{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:300;font-style:italic;color:var(--goldhi);margin-top:10px;letter-spacing:.05em;}
+.compare-sub{font-size:11px;font-weight:300;color:var(--t4);letter-spacing:.08em;margin-top:8px;max-width:640px;margin-left:auto;margin-right:auto;}
+.ct-wrap{overflow-x:auto;}
+.ct-table{width:100%;border-collapse:collapse;table-layout:fixed;}
+.ct-table th,.ct-table td{padding:16px 18px;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.04);font-size:12px;font-weight:300;letter-spacing:.04em;color:var(--t2);text-align:left;}
+.ct-table th{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--tealhi);font-weight:400;background:rgba(26,162,138,.06);border-bottom:1px solid rgba(26,162,138,.14);padding:14px 18px;}
+.ct-table tr:hover td{background:rgba(26,162,138,.02);}
+.ct-table tr:last-child td{border-bottom:none;}
+.ct-col-label{width:26%;}
+.ct-col-us{width:22%;background:rgba(26,162,138,.03);}
+.ct-col-other{width:17%;}
+.ct-crit{display:block;font-size:12px;color:var(--t2);letter-spacing:.04em;margin-bottom:4px;font-weight:400;}
+.ct-crit-sub{display:block;font-size:9px;color:var(--t4);letter-spacing:.05em;line-height:1.5;}
+.ct-brand-sub{display:block;font-size:7px;letter-spacing:.2em;color:var(--t4);margin-top:3px;}
+.ct-yes{display:block;color:var(--tealhi);font-size:12px;margin-bottom:3px;}
+.ct-mid{display:block;color:var(--gold);font-size:12px;margin-bottom:3px;}
+.ct-no{display:block;color:rgba(200,80,80,.7);font-size:12px;margin-bottom:3px;}
+.ct-note{display:block;font-size:9px;color:var(--t4);letter-spacing:.05em;line-height:1.5;}
+.ct-val-us{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--tealhi);display:block;line-height:1;}
+.ct-val-neu{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--t3);display:block;line-height:1;}
+.ct-scores{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px;}
+.ct-score{background:var(--mid);padding:22px 24px;}
+.ct-score-us{background:rgba(26,162,138,.05);border-top:2px solid var(--tealhi);}
+.ct-score-name{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);margin-bottom:12px;display:block;}
+.ct-score-wrap{height:3px;background:rgba(255,255,255,.06);margin-bottom:8px;overflow:hidden;}
+.ct-score-bar{height:100%;width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1);}
+.ct-score-us .ct-score-bar{background:linear-gradient(90deg,var(--teal),var(--tealhi));}
+.ct-score:not(.ct-score-us) .ct-score-bar{background:rgba(255,255,255,.15);}
+.ct-score-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--t1);}
+.ct-score-us .ct-score-val{color:var(--tealhi);}
+
+/* EMAIL OPT-IN */
+.optin{padding:100px 60px;background:var(--mid);position:relative;overflow:hidden;}
+.optin::after{content:'INTELLIGENCE';position:absolute;bottom:-30px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:18vw;color:rgba(26,162,138,.016);pointer-events:none;white-space:nowrap;letter-spacing:.08em;}
+.optin-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;z-index:1;}
+.optin-h{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,60px);font-weight:700;line-height:1;color:var(--t1);margin-bottom:16px;}
+.optin-h em{font-style:italic;color:var(--goldhi);}
+.optin-sub{font-size:14px;font-weight:300;color:var(--t2);line-height:1.9;letter-spacing:.04em;margin-bottom:40px;}
+.optin-form{display:flex;gap:0;max-width:520px;margin:0 auto 14px;}
+.optin-input{flex:1;background:rgba(255,255,255,.04);border:1px solid rgba(26,162,138,.2);border-right:none;padding:16px 22px;color:var(--t1);font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.06em;outline:none;transition:border-color .3s;}
+.optin-input::placeholder{color:var(--t4);}
+.optin-input:focus{border-color:rgba(26,162,138,.5);}
+.optin-btn{background:var(--tealhi);color:var(--black);border:none;cursor:pointer;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:.25em;padding:16px 28px;transition:background .3s;white-space:nowrap;}
+.optin-btn:hover{background:var(--goldhi);}
+.optin-note{font-size:8px;letter-spacing:.18em;color:var(--t4);text-transform:uppercase;}
+
+
+/* FAQ */
+.faq{padding:140px 60px;background:var(--black);}
+.faq-inner{max-width:900px;margin:0 auto;}
+.faq-header{text-align:center;margin-bottom:56px;}
+.faq-h{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,66px);font-weight:700;color:var(--t1);line-height:1;}
+.faq-h em{font-style:italic;color:var(--goldhi);}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.07);}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2vw,23px);font-weight:600;color:var(--t1);letter-spacing:.02em;transition:color .3s;}
+.faq-q:hover{color:var(--tealhi);}
+.faq-sign{font-family:'DM Mono',monospace;font-size:20px;color:var(--tealhi);flex-shrink:0;transition:transform .3s;}
+.faq-item.open .faq-sign{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;}
+.faq-a p{font-size:14px;font-weight:300;color:var(--t2);line-height:1.9;letter-spacing:.04em;padding:0 0 26px;max-width:760px;}
+.faq-item.open .faq-a{max-height:400px;}
+
+/* PRICING */
+.pricing{padding:140px 60px;background:var(--dark);}
+.pricing-inner{max-width:820px;margin:0 auto;}
+.price-h{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,6.5vw,96px);font-weight:700;line-height:.9;color:var(--t1);margin-bottom:12px;text-align:center;}
+.price-h em{font-style:italic;color:var(--tealhi);}
+.price-sub{font-size:15px;font-weight:300;color:var(--t2);margin-bottom:52px;letter-spacing:.06em;text-align:center;}
+.exclusion-block{background:rgba(5,8,16,.98);border:1px solid rgba(255,255,255,.05);padding:28px 36px;margin-bottom:28px;text-align:left;clip-path:polygon(12px 0%,100% 0%,100% calc(100% - 12px),calc(100% - 12px) 100%,0% 100%,0% 12px);}
+.exclusion-block p{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;font-style:italic;color:var(--t2);line-height:1.85;letter-spacing:.04em;}
+.exclusion-block strong{color:var(--t1);font-style:normal;font-weight:600;}
+.exclusion-block em{color:rgba(200,80,80,.65);font-style:normal;}
+.anchor{background:rgba(140,32,32,.05);border:1px solid rgba(140,32,32,.12);padding:18px 28px;margin-bottom:18px;display:flex;align-items:center;gap:16px;}
+.anchor-lbl{font-size:8px;letter-spacing:.2em;color:rgba(200,80,80,.6);text-transform:uppercase;flex:1;text-align:left;}
+.anchor-price{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:rgba(200,164,72,.4);text-decoration:line-through;}
+.anchor-note{font-size:7px;letter-spacing:.16em;color:#8aaabb;text-transform:uppercase;}
+.scarcity{background:rgba(200,164,72,.05);border:1px solid rgba(200,164,72,.18);padding:22px 28px;margin-bottom:28px;display:flex;align-items:center;gap:28px;text-align:left;}
+.sc-info{flex:1;}
+.sc-text{font-size:8px;letter-spacing:.17em;color:#b8ccda;text-transform:uppercase;line-height:2;}
+.sc-bar{height:3px;background:rgba(255,255,255,.06);margin-top:10px;}
+.sc-fill{height:100%;background:linear-gradient(90deg,rgba(200,164,72,.4),var(--goldhi));width:0;transition:width 1.6s cubic-bezier(.16,1,.3,1);}
+.sc-pct{font-size:7px;color:var(--gold);margin-top:5px;text-align:right;letter-spacing:.18em;}
+.sc-num{text-align:center;}
+.sc-count{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:700;color:var(--goldhi);line-height:1;display:block;}
+.sc-lbl{font-size:7px;letter-spacing:.22em;color:#7a9eb0;text-transform:uppercase;margin-top:2px;display:block;}
+.price-card{background:var(--mid);border:1px solid rgba(26,162,138,.16);padding:60px 52px;position:relative;overflow:hidden;margin-bottom:18px;clip-path:polygon(20px 0%,100% 0%,100% calc(100% - 20px),calc(100% - 20px) 100%,0% 100%,0% 20px);}
+.price-card::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--tealhi),transparent);}
+.pc-bg{position:absolute;bottom:-20px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:200px;letter-spacing:.08em;color:rgba(26,162,138,.02);pointer-events:none;line-height:1;}
+.pc-tag{display:block;width:fit-content;margin:0 auto 32px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--black);background:var(--tealhi);padding:6px 16px;font-family:'DM Mono',monospace;}
+.pc-price{font-family:'Cormorant Garamond',serif;font-size:clamp(76px,11vw,104px);font-weight:700;color:var(--t1);line-height:1;letter-spacing:-.02em;text-align:center;display:flex;align-items:flex-start;justify-content:center;gap:6px;}
+.pc-price sup{font-size:34px;margin-top:14px;color:var(--goldhi);font-weight:600;}
+.pc-period{font-size:8px;letter-spacing:.24em;color:#7a9eb0;text-transform:uppercase;margin:10px 0 40px;text-align:center;}
+.pc-feats{list-style:none;text-align:left;margin-bottom:44px;display:flex;flex-direction:column;gap:12px;}
+.pc-feats li{display:flex;align-items:center;gap:14px;font-size:14px;font-weight:300;color:var(--t2);letter-spacing:.05em;}
+.pc-feats li::before{content:'▸';color:var(--tealhi);font-size:9px;flex-shrink:0;}
+.pc-cta{display:block;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.22em;color:var(--black);background:var(--tealhi);padding:18px 28px;text-decoration:none;margin-bottom:14px;clip-path:polygon(12px 0%,100% 0%,100% calc(100% - 12px),calc(100% - 12px) 100%,0% 100%,0% 12px);border:1px solid var(--tealhi);transition:background .3s,color .3s;}
+.pc-cta:hover{background:transparent;color:var(--tealhi);}
+.pc-note{font-size:8px;letter-spacing:.16em;color:#7a9eb0;text-transform:uppercase;margin-top:26px;text-align:center;}
+.guarantee{background:rgba(26,162,138,.04);border:1px solid rgba(26,162,138,.13);padding:26px 30px;display:flex;gap:20px;align-items:flex-start;text-align:left;clip-path:polygon(10px 0%,100% 0%,100% calc(100% - 10px),calc(100% - 10px) 100%,0% 100%,0% 10px);}
+.guar-icon{font-size:26px;flex-shrink:0;margin-top:2px;}
+.guar-title{font-size:10px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--t1);margin-bottom:8px;}
+.guar-body{font-size:13px;font-weight:300;color:#b8ccda;line-height:1.85;letter-spacing:.04em;}
+.guarantee-mini{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--tealhi);}
+.guarantee-mini::before{content:'◈';}
+
+/* FINAL */
+.final{padding:180px 60px;text-align:center;background:var(--mid);position:relative;overflow:hidden;}
+.final-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);font-family:'Bebas Neue',sans-serif;font-size:30vw;color:rgba(26,162,138,.016);pointer-events:none;white-space:nowrap;letter-spacing:.08em;}
+.final-inner{position:relative;z-index:1;}
+.final-h{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7.5vw,116px);font-weight:700;line-height:.9;color:var(--t1);margin-bottom:28px;}
+.final-h em{font-style:italic;color:var(--goldhi);display:block;}
+.final-pre{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,38px);font-weight:300;letter-spacing:.12em;color:#8aafc0;display:block;margin-bottom:10px;}
+.final-dots{font-family:'DM Mono',monospace;font-size:clamp(22px,3vw,44px);color:var(--goldhi);letter-spacing:.45em;display:block;margin-bottom:52px;}
+.final-sub{font-size:16px;font-weight:300;color:var(--t2);max-width:480px;margin:0 auto 52px;line-height:1.85;letter-spacing:.05em;}
+
+/* FOOTER */
+footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding:36px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#8aafc0;}
+.foot-logo em{font-style:normal;color:var(--tealhi);}
+.foot-copy{font-size:7px;letter-spacing:.2em;color:#7a9eb0;text-transform:uppercase;}
+.foot-links{display:flex;gap:24px;list-style:none;}
+.foot-links a{font-size:7px;letter-spacing:.18em;text-transform:uppercase;color:#7a9aaa;text-decoration:none;transition:color .3s;}
+.foot-links a:hover{color:var(--tealhi);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero,.manifesto,.who,.ingredients,.ritual,.why,.lexicon,.proof,.compare,.optin,.pricing,.final{padding-left:20px;padding-right:20px;}
+  .man-grid,.why-grid,.ing-intro{grid-template-columns:1fr;}
+  .go-card{grid-template-columns:40px 1fr 24px;}
+  .stop-grid{grid-template-columns:1fr;}
+  .ing-grid{grid-template-columns:repeat(2,1fr);}
+  .ritual-grid{grid-template-columns:1fr 1fr;}
+  .lex-grid{grid-template-columns:1fr 1fr;}
+  .tc-grid{grid-template-columns:1fr;}
+  .optin-form{flex-direction:column;}
+  .optin-input{border-right:1px solid rgba(26,162,138,.2);border-bottom:none;}
+  .ct-scores{grid-template-columns:1fr 1fr;}
+  footer{flex-direction:column;gap:16px;text-align:center;}
+  .foot-links{flex-wrap:wrap;justify-content:center;}
+}
+@media(max-width:640px){
+  .trust-strip{flex-wrap:wrap;}
+  .ing-grid{grid-template-columns:1fr;}
+  .ritual-grid{grid-template-columns:1fr;}
+  .lex-grid{grid-template-columns:1fr;}
+  .ct-scores{grid-template-columns:1fr;}
+  .hero-ctas{flex-direction:column;align-items:stretch;width:100%;max-width:320px;}
+}
+
+/* SCROLL PROGRESS BAR */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:600;
+  background:linear-gradient(90deg,var(--teal),var(--goldhi));box-shadow:0 0 10px rgba(36,188,168,.6);transition:width .1s linear;}
+/* MAGNETIC BUTTONS */
+.btn-main,.nav-cta,.pc-cta,.optin-btn{will-change:transform;transition:transform .18s cubic-bezier(.16,1,.3,1),background .3s,color .3s,box-shadow .3s;}
+.btn-main:hover,.nav-cta:hover,.pc-cta:hover{box-shadow:0 0 24px rgba(36,188,168,.35);}
+
+/* LANGUAGE SWITCHER */
+.langsel{display:flex;gap:2px;margin-left:16px;align-items:center;}
+.langsel a{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;color:#8aa0b4;text-decoration:none;padding:3px 6px;border:1px solid transparent;transition:color .3s,border-color .3s;}
+.langsel a:hover{color:var(--tealhi);}
+.langsel a.active{color:var(--tealhi);border-color:rgba(26,162,138,.4);}
+@media(max-width:1024px){.langsel{margin-left:auto;}}
+</style>
+<link rel="alternate" hreflang="nl" href="index.html">
+<link rel="alternate" hreflang="en" href="cogvivo_en.html">
+<link rel="alternate" hreflang="de" href="cogvivo_de.html">
+<link rel="alternate" hreflang="fr" href="cogvivo_fr.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
+<script src="config.js"></script>
+</head>
+<body>
+
+<div id="progress"></div>
+<div class="grain"></div>
+<div id="CUR"></div><div id="CURR"></div>
+
+<!-- NAV -->
+<nav id="NAV">
+  <div class="nav-brand">COGVIVO<em>.</em></div>
+  <ul class="nav-links">
+    <li><a href="#ingredients">// Formula</a></li>
+    <li><a href="#protocol">// Protocol</a></li>
+    <li><a href="#faq">// FAQ</a></li>
+    <li><a href="#belofte">// Our Word</a></li>
+    <li><a href="#briefing">// Waitlist</a></li>
+    <li><a href="#pricing">// Activation</a></li>
+  </ul>
+  <a href="#pricing" class="nav-cta">Start Today</a>
+  <div class="langsel"><a href="index.html" class="">NL</a><a href="cogvivo_en.html" class="active">EN</a><a href="cogvivo_de.html" class="">DE</a><a href="cogvivo_fr.html" class="">FR</a></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="brk tl"></div><div class="brk tr"></div>
+  <div class="brk bl"></div><div class="brk br"></div>
+
+  <div class="hero-crest-wrap">
+    <img class="hero-logo" src="cogvivo-logo.webp" alt="Cogvivo" width="380" height="249"
+         onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block';">
+    <div id="logo-fallback" class="logo-wordmark" style="display:none;">COGVIVO<span>.</span></div>
+    <span class="hero-crest-tag">Elite Combat Pro</span>
+  </div>
+
+  <div class="htb">
+    <span class="htb-item"><span class="htb-dot"></span>Clinically Dosed</span>
+    <span class="htb-sep">|</span>
+    <span class="htb-item">EU Novel Food Compliant</span>
+    <span class="htb-sep">|</span>
+    <span class="htb-item">Magtein® · EU-approved</span>
+    <span class="htb-sep">|</span>
+    <span class="htb-item">35 Active Ingredients</span>
+  </div>
+
+  <div class="slogan-wrap">
+    <h1 class="slogan">Smart People <span class="slogan-dots">Already..........</span></h1>
+  </div>
+
+  <p class="hero-claim">Every cognitive mechanism a supplement can legally reach — at the dose the studies call for, not the dose that flatters the label.<br>Built for those who read the studies themselves.</p>
+  <p class="hero-sub">35 clinically dosed ingredients · 14 mechanisms · EU-compliant</p>
+
+  <div class="hero-ctas">
+    <a href="#pricing" class="btn-main">Start Today</a>
+    <a href="#ingredients" class="btn-alt">// See the Formula</a>
+  </div>
+  <div class="hero-guar">Every milligram on the label · Every dose traceable to the study</div>
+</section>
+
+<!-- WETTELIJKE DISCLAIMER BANNER -->
+<div style="background:rgba(5,8,16,0.98);border-top:1px solid rgba(26,162,138,0.08);border-bottom:1px solid rgba(26,162,138,0.08);padding:12px 60px;text-align:center;">
+  <p style="font-size:8px;letter-spacing:.15em;color:var(--t4);text-transform:uppercase;">Food supplement · Not a substitute for a varied diet · Keep out of reach of children · Consult a doctor if in doubt</p>
+</div>
+
+<!-- VERLIES BANNER -->
+<div class="loss-banner">
+  <p>There are two kinds of people. Those who accept how their brain runs by default — and those who decide that <strong>default is not good enough.</strong></p>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="ts rv"><span class="ts-val c-t">35</span><span class="ts-lbl">Active<br>Ingredients</span></div>
+  <div class="ts rv d1"><span class="ts-val c-g">14</span><span class="ts-lbl">Mechanisms<br>Covered</span></div>
+  <div class="ts rv d2"><span class="ts-val c-w">AM·PM</span><span class="ts-lbl">Circadian<br>System</span></div>
+  <div class="ts rv d3"><span class="ts-val c-g">EU</span><span class="ts-lbl">Novel Food<br>Compliant</span></div>
+  <div class="ts rv d4"><span class="ts-val c-t">100%</span><span class="ts-lbl">Transparent<br>Formula</span></div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner">
+    <span class="ti r">COGVIVO · 35 INGREDIENTS</span><span class="ti g">14 NEUROBIOLOGICAL MECHANISMS</span><span class="ti r">EU-COMPLIANT · REGULATORY FRAMEWORKS RESPECTED</span><span class="ti g">MAGTEIN® · EU REGULATION 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">CLINICALLY DOSED · NO PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARENT FORMULA</span><span class="ti g">AM/PM CIRCADIAN PROTOCOL</span><span class="ti r">COGVIVO · 35 INGREDIENTS</span><span class="ti g">14 NEUROBIOLOGICAL MECHANISMS</span><span class="ti r">EU-COMPLIANT · REGULATORY FRAMEWORKS RESPECTED</span><span class="ti g">MAGTEIN® · EU REGULATION 2025/2225</span><span class="ti r">CITICOLINE · NIAGEN® NR · CREAPURE® · SYNAPSA®</span><span class="ti g">CLINICALLY DOSED · NO PROPRIETARY BLENDS</span><span class="ti r">100% TRANSPARENT FORMULA</span><span class="ti g">AM/PM CIRCADIAN PROTOCOL</span>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto sec">
+  <div class="inner">
+    <div class="man-grid">
+      <div class="rv">
+        <p class="lbl tl">// Mission</p>
+        <h2 class="man-h">The industry<br>sells <em>hope.</em><br>We deliver <em>proof.</em></h2>
+        <p class="man-body">
+          Ninety percent of the supplement market is underdosed, unproven, or both. Pretty packaging. Irrelevant amounts. Claims without a single peer-reviewed reference. The strategy works, because most consumers don't read the label.
+          <br><br>
+          Cogvivo Protocol exists for the exception. For the person who does read the label — and then discovers that 100mg of Lion's Mane produces no effect in any human study. Who knows the difference between in-vitro data and a randomised clinical trial. Who buys on the science behind the dose, not the packaging.
+        </p>
+        <div class="enemy-bar rv">
+          <p>The supplement industry assumes you can't read. That you don't check doses. That you buy on the packshot. <strong>Cogvivo is built for the people who do.</strong></p>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="ev-card">
+          <div class="ev-head">
+            <span class="ev-head-lbl">// Formula comparison</span>
+            <span class="ev-head-id">TRANSPARENT</span>
+          </div>
+          <div class="ev-body">
+            <p class="ev-sub">Industry standard vs. Cogvivo Protocol</p>
+            <div class="vr no"><div class="vi">✕</div><span class="vt">100 mg Lion's Mane — clinically irrelevant</span></div>
+            <div class="vr no"><div class="vi">✕</div><span class="vt">Proprietary blend — doses hidden</span></div>
+            <div class="vr no"><div class="vi">✕</div><span class="vt">250 mg Bacopa — below therapeutic threshold</span></div>
+            <div class="vr no"><div class="vi">✕</div><span class="vt">Magnesium oxide — no cerebral uptake</span></div>
+            <div class="vr no"><div class="vi">✕</div><span class="vt">Claims without human RCT reference</span></div>
+            <div class="ev-div"></div>
+            <div class="vr ok"><div class="vi">✓</div><span class="vt">1000 mg Lion's Mane, 30% beta-glucans</span></div>
+            <div class="vr ok"><div class="vi">✓</div><span class="vt">100% transparent — every mg visible on the label</span></div>
+            <div class="vr ok"><div class="vi">✓</div><span class="vt">320 mg Bacopa, 45% Bacosides — active range</span></div>
+            <div class="vr ok"><div class="vi">✓</div><span class="vt">Magtein® 2000 mg — EU Reg. 2025/2225</span></div>
+            <div class="vr ok"><div class="vi">✓</div><span class="vt">Every claim tied to published RCT data</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section class="origin sec">
+  <div class="origin-inner">
+    <div class="rv">
+      <p class="origin-label">// Origin</p>
+      <h2 class="origin-h">This didn't start<br>as a <em>company.</em></h2>
+      <div class="origin-body">
+        <p>It began as frustration. Three years of deep research into what the science actually says about cognitive performance — not the marketing version, but the primary literature. Every claimed mechanism verified. Every dose compared to the human trials the claim rests on. Every supplement on the market tested against the studies manufacturers cite themselves.</p>
+        <p>The conclusion was always the same: the products contain a fraction of the amounts that produce effects in those studies. Not by mistake. By design. More active substance costs more money, and the average consumer doesn't check the label anyway. That model works commercially. It doesn't work neurologically.</p>
+        <p>Cogvivo Protocol exists because there had to be a formulation without that compromise. Every mechanism covered. Every dose clinically active. Every compound transparent on the label, verifiable through the studies behind it. If you're reading this and thinking "finally" — this product is for you.</p>
+        <div class="origin-sig">
+          <div class="origin-sig-line"></div>
+          <div>
+            <p class="origin-sig-name">Cogvivo Formulation Team</p>
+            <p class="origin-sig-title">// Amsterdam · 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOOR WIE -->
+<section class="who sec" id="wie">
+  <div class="inner">
+    <h2 class="who-h rv">Cogvivo Protocol<br>is not for everyone.<br><em>Is it for you?</em></h2>
+    <p class="who-sub rv">The formulation is developed for a specific type of person. Do you recognise yourself below?</p>
+    <div class="go-stack rv">
+      <div class="go-card">
+        <div class="go-num">01</div>
+        <div class="go-body">
+          <span class="go-badge">▸ Access</span>
+          <h3>The High-Performer</h3>
+          <p>You're building something that matters — a company, a fortune, a position. Every day counts, every decision counts, every meeting counts. You treat cognition as the operational edge it is, and you don't accept suboptimal days when they're avoidable.</p>
+        </div>
+        <div class="go-arr">→</div>
+      </div>
+      <div class="go-card">
+        <div class="go-num">02</div>
+        <div class="go-body">
+          <span class="go-badge">▸ Access</span>
+          <h3>The Scientific Thinker</h3>
+          <p>You read primary literature. You know the difference between in-vitro and human RCT evidence. You're done with brands that make claims from animal studies and can't back the label dose with a single publication. You want mechanisms, not slogans.</p>
+        </div>
+        <div class="go-arr">→</div>
+      </div>
+      <div class="go-card">
+        <div class="go-num">03</div>
+        <div class="go-body">
+          <span class="go-badge">▸ Access</span>
+          <h3>The Precision Biohacker</h3>
+          <p>Sleep, heart-rate variability, training, nutrition — you optimise everything systematically. Your brain is the command centre of your entire system. It deserves the same precision and rigour as the rest of your protocol. No more, no less.</p>
+        </div>
+        <div class="go-arr">→</div>
+      </div>
+    </div>
+    <div class="stop-grid rv">
+      <div class="stop-card">
+        <span class="stop-badge">✕ No access</span>
+        <h3>The Bargain Hunter</h3>
+        <p>Cheaper options exist. They also contain cheaper ingredients, in cheaper forms, at cheaper doses. If price is your primary filter, we're not your match — and that's fine.</p>
+      </div>
+      <div class="stop-card">
+        <span class="stop-badge">✕ No access</span>
+        <h3>The Impatientre</h3>
+        <p>Neuroplasticity works over weeks. Bacopa Monnieri builds its effect over 8 to 12 weeks. If you expect results tomorrow, this protocol isn't for you. Biology doesn't run on your timeline.</p>
+      </div>
+      <div class="stop-card">
+        <span class="stop-badge">✕ No access</span>
+        <h3>The Committed Sceptic</h3>
+        <p>We show mechanisms and peer-reviewed data, not anecdotes and influencer testimonials. If you've already decided supplements don't work, regardless of the evidence — close this window and save us both the time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section class="ingredients sec" id="ingredients">
+  <div class="inner">
+    <div class="ing-intro">
+      <div class="rv">
+        <p class="lbl gl">// Compound Analysis</p>
+        <h2 class="ing-h">35 Ingredients.<br><em>Zero Compromises.</em></h2>
+      </div>
+      <p class="ing-body rv d2">Every ingredient serves a specific neurobiological mechanism and is dosed at a clinically active level — human-backed where possible, strongly mechanistic where the data requires deeper research. All substances EU-authorised; all legal limits respected.</p>
+    </div>
+
+    <!-- TIER I -->
+    <div class="tier t1 rv">
+      <div class="tier-bar"><span class="t-badge">Tier I</span><span class="t-desc">Strongest clinical support — multiple randomised human trials</span></div>
+      <div class="ing-grid">
+        <div class="ic"><p class="ic-name">Creatine-monohydraat</p><p class="ic-brand">Creapure®</p><p class="ic-dose">5000 mg / day</p><p class="ic-mech">Cerebral ATP synthesis → working memory, mental fatigue ↓</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="94"></div></div><span class="ev-pct">94%</span></div></div>
+        <div class="ic"><p class="ic-name">Citicoline</p><p class="ic-brand">Generiek of Cognizin®</p><p class="ic-dose">500 mg / day</p><p class="ic-mech">Cholinergic system ↑ → attention, processing speed (EU ceiling dose)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="92"></div></div><span class="ev-pct">92%</span></div></div>
+        <div class="ic"><p class="ic-name">Bacopa Monnieri</p><p class="ic-brand">Synapsa® · 55% bacosiden</p><p class="ic-dose">320 mg / day</p><p class="ic-mech">Serotonin-dopamine modulation → declarative memory, learning speed</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="88"></div></div><span class="ev-pct">88%</span></div></div>
+        <div class="ic"><p class="ic-name">L-Tyrosine</p><p class="ic-brand">Vrij aminozuur</p><p class="ic-dose">1500 mg / day</p><p class="ic-mech">Dopamine & noradrenaline precursor → focus under high load</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="86"></div></div><span class="ev-pct">86%</span></div></div>
+        <div class="ic"><p class="ic-name">Magnesium-L-threonaat</p><p class="ic-brand">Magtein®</p><p class="ic-dose">2000 mg / day</p><p class="ic-mech">Synaptic density ↑ → werkgeheugen, plasticiteit (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="90"></div></div><span class="ev-pct">90%</span></div></div>
+        <div class="ic"><p class="ic-name">DHA (omega-3)</p><p class="ic-brand">Algal oil · vegan</p><p class="ic-dose">500 mg DHA / day</p><p class="ic-mech">Membrane fluidity & neurogenese — draagt bij aan normale hersenfunctie†</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="91"></div></div><span class="ev-pct">91%</span></div></div>
+        <div class="ic"><p class="ic-name">L-Theanine</p><p class="ic-brand">Generiek</p><p class="ic-dose">200 mg / day</p><p class="ic-mech">Alpha-wave activity ↑ → calm, focused alertness (strongest with caffeine)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="85"></div></div>
+        <div class="ic"><p class="ic-name">Caffeine (optional)</p><p class="ic-brand">Watervrij · aparte SKU</p><p class="ic-dose">100 mg / day</p><p class="ic-mech">Adenosine antagonist → alertness ↑; strongest with L-theanine</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="95"></div></div><span class="ev-pct">95%</span></div></div><span class="ev-pct">85%</span></div></div>
+        <div class="ic"><p class="ic-name">Nicotinamide Riboside</p><p class="ic-brand">Niagen®</p><p class="ic-dose">300 mg / day</p><p class="ic-mech">NAD+ biosynthesis → cellular energy, DNA repair (EU ceiling dose)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="84"></div></div><span class="ev-pct">84%</span></div></div>
+        <div class="ic"><p class="ic-name">Fosfatidylserine</p><p class="ic-brand">Sharp-PS® · zonnebloem</p><p class="ic-dose">300 mg / day</p><p class="ic-mech">HPA-axis modulation → cortisolrespons, geheugenconsolidatie</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="87"></div></div><span class="ev-pct">87%</span></div></div>
+      </div>
+    </div>
+
+    <!-- TIER II -->
+    <div class="tier t2 rv">
+      <div class="tier-bar"><span class="t-badge">Tier II</span><span class="t-desc">Strong mechanistic and clinical support</span></div>
+      <div class="ing-grid">
+        <div class="ic"><p class="ic-name">Lion's Mane</p><p class="ic-brand">8:1 vruchtlichaam · >30% beta-glucan</p><p class="ic-dose">1000 mg / day</p><p class="ic-mech">NGF-ondersteuning → neuroplasticiteit, BDNF-cascade</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="82"></div></div><span class="ev-pct">82%</span></div></div>
+        
+        <div class="ic"><p class="ic-name">Acetyl-L-carnitine</p><p class="ic-brand">Carnipure®</p><p class="ic-dose">1500 mg / day</p><p class="ic-mech">Mitochondrial transport + cholinergic → cerebral energy</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="83"></div></div><span class="ev-pct">83%</span></div></div>
+        <div class="ic"><p class="ic-name">Rhodiola Rosea</p><p class="ic-brand">Rhodiolife® · 3% rosavins</p><p class="ic-dose">400 mg / day</p><p class="ic-mech">Adaptogen → mental stamina ↑, fatigue ↓</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="78"></div></div><span class="ev-pct">78%</span></div></div>
+        <div class="ic"><p class="ic-name">Panax Ginseng</p><p class="ic-brand">Cereboost® / G115</p><p class="ic-dose">200 mg / day</p><p class="ic-mech">Acute cognition & alertness → working memory, reaction time</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="76"></div></div><span class="ev-pct">76%</span></div></div>
+        <div class="ic"><p class="ic-name">Ginkgo Biloba</p><p class="ic-brand">24% flavone glycosides / 6% terpenes</p><p class="ic-dose">240 mg / day</p><p class="ic-mech">Cerebral blood flow ↑ → memory, attention</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="75"></div></div><span class="ev-pct">75%</span></div></div>
+        <div class="ic"><p class="ic-name">Pycnogenol®</p><p class="ic-brand">Pine bark · 95% OPC</p><p class="ic-dose">100 mg / day</p><p class="ic-mech">NO synthesis → cerebral microcirculation, attention, working memory</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="77"></div></div><span class="ev-pct">77%</span></div></div>
+        <div class="ic"><p class="ic-name">Cacao-flavanolen</p><p class="ic-brand">Acticoa®</p><p class="ic-dose">200 mg flavanolen / day</p><p class="ic-mech">Endothelial function → cerebral blood flow (EFSA claim)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="74"></div></div><span class="ev-pct">74%</span></div></div>
+        <div class="ic"><p class="ic-name">PQQ</p><p class="ic-brand">BioPQQ®</p><p class="ic-dose">20 mg / day</p><p class="ic-mech">Mitochondriogenesis → nieuwe mitochondriën in neuronen (plafonddosis)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="72"></div></div><span class="ev-pct">72%</span></div></div>
+        
+        <div class="ic"><p class="ic-name">Co-enzym Q10</p><p class="ic-brand">Kaneka Ubiquinol</p><p class="ic-dose">100 mg / day</p><p class="ic-mech">Electron transport chain → cerebral energy production</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
+        <div class="ic"><p class="ic-name">Sulforaphane</p><p class="ic-brand">TrueBroc® broccoli</p><p class="ic-dose">100 mg / day</p><p class="ic-mech">Nrf2 activation → strongest cellular antioxidant response</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="73"></div></div><span class="ev-pct">73%</span></div></div>
+        
+        <div class="ic"><p class="ic-name">Saffron extract</p><p class="ic-brand">affron® · 3,5%</p><p class="ic-dose">28 mg / day</p><p class="ic-mech">Mood & executive function → focus, mental resilience</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="74"></div></div><span class="ev-pct">74%</span></div></div>
+        
+        
+      </div>
+    </div>
+
+    <!-- TIER III -->
+    <div class="tier tier3 rv" style="margin-bottom:36px;">
+      <div class="tier3-bar"><span class="tier3-badge">Tier III</span><span class="tier3-desc">Micronutrients and synergists — the essential foundation</span></div>
+      <div class="ing-grid">
+        <div class="ic"><p class="ic-name">TMG (betaïne)</p><p class="ic-brand">Watervrij</p><p class="ic-dose">1000 mg / day</p><p class="ic-mech">Methyl donor → homocysteine ↓, methylation cycle</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="66"></div></div><span class="ev-pct">66%</span></div></div>
+        <div class="ic"><p class="ic-name">Taurine</p><p class="ic-brand">Vrij aminozuur</p><p class="ic-dose">1000 mg / day</p><p class="ic-mech">Neuroprotection, GABAergic modulation → calm</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="64"></div></div><span class="ev-pct">64%</span></div></div>
+        <div class="ic"><p class="ic-name">Vitamine B9</p><p class="ic-brand">Quatrefolic® · 5-MTHF</p><p class="ic-dose">800 mcg / day</p><p class="ic-mech">Active folate → homocysteine ↓, methylation (VITACOG)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="72"></div></div><span class="ev-pct">72%</span></div></div>
+        <div class="ic"><p class="ic-name">Vitamine B12</p><p class="ic-brand">Methylcobalamine</p><p class="ic-dose">1000 mcg / day</p><p class="ic-mech">Myelin integrity → nerve conduction, cognitive energy</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="72"></div></div><span class="ev-pct">72%</span></div></div>
+        <div class="ic"><p class="ic-name">Vitamine B6</p><p class="ic-brand">Pyridoxaal-5-fosfaat</p><p class="ic-dose">5 mg / day</p><p class="ic-mech">Neurotransmitter synthesis → serotonin, dopamine, GABA</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
+        <div class="ic"><p class="ic-name">Riboflavine (B2)</p><p class="ic-brand">Vitamine B2</p><p class="ic-dose">5 mg / day</p><p class="ic-mech">Cofactor methyleringscyclus (MTHFR-route)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="60"></div></div><span class="ev-pct">60%</span></div></div>
+        <div class="ic"><p class="ic-name">Glycine</p><p class="ic-brand">Vrij aminozuur</p><p class="ic-dose">3000 mg / day</p><p class="ic-mech">NMDA-coagonist → slaapkwaliteit, consolidatie (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="69"></div></div><span class="ev-pct">69%</span></div></div>
+        <div class="ic"><p class="ic-name">Chamomile extract</p><p class="ic-brand">Std. Matricaria · apigenin</p><p class="ic-dose">250 mg / day</p><p class="ic-mech">Rest & sleep architecture → glymphatic clearance (PM)</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="62"></div></div><span class="ev-pct">62%</span></div></div>
+        
+        <div class="ic"><p class="ic-name">Zink</p><p class="ic-brand">Bisglycinaat</p><p class="ic-dose">10 mg / day</p><p class="ic-mech">NMDA-receptormodulatie → synaptische plasticiteit</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="60"></div></div><span class="ev-pct">60%</span></div></div>
+        <div class="ic"><p class="ic-name">Vitamine D3</p><p class="ic-brand">Cholecalciferol</p><p class="ic-dose">2000 IU / day</p><p class="ic-mech">Neurotrophin modulation → neuroprotection, mood</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="70"></div></div><span class="ev-pct">70%</span></div></div>
+        <div class="ic"><p class="ic-name">Vitamine C</p><p class="ic-brand">Ascorbinezuur</p><p class="ic-dose">200 mg / day</p><p class="ic-mech">Regenerates antioxidants → normal nervous system</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="58"></div></div><span class="ev-pct">58%</span></div></div>
+        <div class="ic"><p class="ic-name">Pantotheenzuur (B5)</p><p class="ic-brand">Calcium-D-pantothenaat</p><p class="ic-dose">6 mg / day</p><p class="ic-mech">Contributes to normal mental performance</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="58"></div></div><span class="ev-pct">58%</span></div></div>
+        <div class="ic"><p class="ic-name">Thiamine (B1)</p><p class="ic-brand">Vitamine B1</p><p class="ic-dose">5 mg / day</p><p class="ic-mech">Glucose metabolism in nerve cells → cognitive energy</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="56"></div></div><span class="ev-pct">56%</span></div></div>
+        <div class="ic"><p class="ic-name">Jodium</p><p class="ic-brand">Kaliumjodide</p><p class="ic-dose">150 mcg / day</p><p class="ic-mech">Contributes to normal cognitive function</p><div class="ic-ev"><div class="ev-bar"><div class="ev-fill" data-w="55"></div></div><span class="ev-pct">55%</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROTOCOL -->
+<section class="ritual sec" id="protocol">
+  <div class="ritual-inner">
+    <div class="ritual-header rv">
+      <p class="lbl tl" style="justify-content:center">// The Protocol</p>
+      <h2 class="ritual-h">This is not<br>an instruction manual.<br><em>This is the Protocol.</em></h2>
+      <p class="ritual-sub">Operators follow the system. The system delivers the results.</p>
+    </div>
+    <div class="ritual-grid">
+      <div class="ritual-step rv">
+        <span class="ritual-time">07:00</span>
+        <span class="ritual-step-label">▸ Activation</span>
+        <h3>Morning dose</h3>
+        <p>Four capsules, with or right after breakfast. The L-Theanine and caffeine combination works best when the body is already active. Wait 30 minutes before adding more coffee.</p>
+        <span class="ritual-step-num">01</span>
+      </div>
+      <div class="ritual-step rv d1">
+        <span class="ritual-time">13:00</span>
+        <span class="ritual-step-label">▸ Continuity</span>
+        <h3>Midday dose</h3>
+        <p>Four capsules with lunch. Bacopa Monnieri works cumulatively — daily continuity over at least eight weeks is the mechanism. Never skip two consecutive days.</p>
+        <span class="ritual-step-num">02</span>
+      </div>
+      <div class="ritual-step rv d2">
+        <span class="ritual-time">21:00</span>
+        <span class="ritual-step-label">▸ Consolidation</span>
+        <h3>Evening dose</h3>
+        <p>Two capsules before sleep. Glycine (3000 mg) and Magtein® work on memory consolidation during sleep. NMDA receptors are most active at night. Use this mechanism.</p>
+        <span class="ritual-step-num">03</span>
+      </div>
+      <div class="ritual-step rv d3">
+        <span class="ritual-time">90d</span>
+        <span class="ritual-step-label">▸ Baseline Reached</span>
+        <h3>Full Activation</h3>
+        <p>Na 90 dagen consistent protocol is de synapstische dichtheid aantoonbaar hoger, de NGF-cascade actief en de adaptieve stress-respons geoptimaliseerd. Operators meten. Geen uitzonderingen.</p>
+        <span class="ritual-step-num">04</span>
+      </div>
+    </div>
+    <div class="ritual-doctrine rv">
+      <p>"The Protocol is not a recommendation. It is the operational infrastructure on which cognitive performance is built. <strong>Operators follow the system. The system delivers the results.</strong>"</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAAROM HET WERKT -->
+<section class="why sec" id="why">
+  <div class="inner">
+    <div class="why-grid">
+      <div class="rv">
+        <p class="lbl tl">// Mechanisms</p>
+        <h2 class="why-h">The dose is<br>the <em>difference.</em></h2>
+        <p class="why-body">
+          Most supplements fail for one reason: they dose below the threshold at which effects appear in the very studies they cite as proof. Cogvivo Protocol is built on one principle — if the study requires 1000 mg for a measurable effect, there's 1000 mg in it. Not 200 mg wrapped in good packaging.
+          <br><br>
+          The mechanisms in the table alongside rest on peer-reviewed research — with human, randomised trials as the highest standard and full transparency about where the evidence is stronger or thinner. No hidden doses, no empty promises.
+        </p>
+      </div>
+      <div class="why-table rv d2">
+        <div class="wt-head"><span>Mechanism</span><span>Compound</span><span>Effect</span></div>
+        <div class="wt-row"><span>Synaptic density</span><span class="wt-gold">Magtein®</span><span class="wt-teal">Working memory ↑</span></div>
+        <div class="wt-row"><span>NGF synthesis</span><span class="wt-gold">Lion's Mane</span><span class="wt-teal">Neuroplasticity ↑</span></div>
+        <div class="wt-row"><span>Cholinergic transmission</span><span class="wt-gold">Cognizin®</span><span class="wt-teal">Focus ↑</span></div>
+        <div class="wt-row"><span>HPA-axis modulation</span><span class="wt-gold">Rhodiola + PS</span><span class="wt-teal">Cortisol ↓</span></div>
+        <div class="wt-row"><span>NAD+ / cellular energy</span><span class="wt-gold">Niagen® NR</span><span class="wt-teal">Cellular repair ↑</span></div>
+        <div class="wt-row"><span>Membrane fluidity</span><span class="wt-gold">DHA/EPA algenolie</span><span class="wt-teal">Synaptic transmission ↑</span></div>
+        <div class="wt-row"><span>Mitochondriogenesis</span><span class="wt-gold">PQQ · CoQ10</span><span class="wt-teal">Cerebral energy ↑</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATOR LEXICON -->
+<section class="lexicon sec">
+  <div class="lexicon-inner">
+    <div class="lex-header rv">
+      <p class="lbl tl" style="justify-content:center">// Operator Lexicon</p>
+      <h2 class="lex-h">The language of <em>the system.</em></h2>
+    </div>
+    <div class="lex-grid rv d1">
+      <div class="lex-item">
+        <p class="lex-term">OPERATOR</p>
+        <p class="lex-def">A Cogvivo user who treats cognition as operational infrastructure, not a consumer product. Someone who measures, follows the protocol and quantifies results rather than just experiencing them.</p>
+      </div>
+      <div class="lex-item">
+        <p class="lex-term">THE SYSTEM</p>
+        <p class="lex-def">The complete Cogvivo Protocol stack including the daily dosing protocol. Not a product on its own — an operational framework for systematic cognitive optimisation.</p>
+      </div>
+      <div class="lex-item">
+        <p class="lex-term">ACTIVATION</p>
+        <p class="lex-def">The moment an Operator starts the protocol. Not an order. A decision to take cognition seriously as the competitive advantage it biologically is.</p>
+      </div>
+      <div class="lex-item">
+        <p class="lex-term">COGNITIVE INFRASTRUCTURE</p>
+        <p class="lex-def">The molecular basis on which cognitive performance rests — sleep, nutrition, training and the biochemical layer Cogvivo Protocol provides. All of it together, or not optimal.</p>
+      </div>
+      <div class="lex-item">
+        <p class="lex-term">BASELINE</p>
+        <p class="lex-def">The point at which all compounds are fully systemically active — typically after 60 to 90 days. Operators establish their cognitive baseline before activation and measure after each cycle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONS WOORD (waarden-gedreven vertrouwen, geen verzonnen reviews) -->
+<section class="proof sec" id="belofte">
+  <div class="inner">
+    <div class="proof-head rv">
+      <p class="lbl gl" style="justify-content:center">// Our Word</p>
+      <h2 class="proof-h">What we promise —<br>and what we don't.</h2>
+      <p class="proof-sub">Every dose verifiable · Every milligram on the label · No proof we don't have</p>
+    </div>
+
+    <div class="tc-grid">
+      <div class="tc rv">
+        <p class="tc-tag">// We promise</p>
+        <p class="tc-q">Every milligram is on the label. Every dose traces back to the study it rests on. What we can't substantiate, we don't claim — and what the EU doesn't allow isn't in it.</p>
+      </div>
+      <div class="tc rv d2">
+        <p class="tc-tag">// We don't promise</p>
+        <p class="tc-q">No miracle cure, no overnight results, no healing. Neuroplasticity works over weeks, not hours. If you're after a quick kick, you're in the wrong place — and we'd rather say so up front.</p>
+      </div>
+      <div class="tc rv d4">
+        <p class="tc-tag">// Why that matters</p>
+        <p class="tc-q">A brand that promises you everything can be trusted with nothing. We build for the long term: people who read the label, check the dose, and stay because it holds up — not because we sold it well.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERGELIJKING -->
+<section class="compare sec" id="compare">
+  <div class="inner">
+    <div class="compare-header rv">
+      <p class="lbl gl" style="justify-content:center">// Stack Comparison</p>
+      <h2 class="compare-h">Compare the<br><em>doses yourself.</em></h2>
+      <p class="compare-claim">Verifiable. Transparent. Based on publicly available label data.</p>
+      <p class="compare-sub">Figures are indicative and based on publicly published product labels; always check each product's current label. We make no medical claims about other brands — we compare publicly available dosing information only. Brand names are property of their respective owners.</p>
+    </div>
+    <div class="ct-wrap rv">
+      <table class="ct-table">
+        <thead>
+          <tr>
+            <th class="ct-col-label">Criterion</th>
+            <th class="ct-col-us">Cogvivo Protocol<span class="ct-brand-sub">by Cogvivo</span></th>
+            <th class="ct-col-other">Mind Lab Pro®<span class="ct-brand-sub">Opti-Nutra</span></th>
+            <th class="ct-col-other">Qualia Mind®<span class="ct-brand-sub">Neurohacker</span></th>
+            <th class="ct-col-other">Alpha Brain®<span class="ct-brand-sub">Onnit</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ct-crit">Lion's Mane</span><span class="ct-crit-sub">Clinically active ≥ 500 mg (human trials)</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ 1000 mg</span><span class="ct-note">30% beta-glucans · double the clinical dose</span></td>
+            <td><span class="ct-mid">~ 500 mg</span><span class="ct-note">Minimum clinical threshold</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">Magnesium L-Threonate</span><span class="ct-crit-sub">Magtein® = only EU-approved cerebral Mg form</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ Magtein® 2000 mg</span><span class="ct-note">EU Reg. 2025/2225 · clinically validated</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">Citicoline</span><span class="ct-crit-sub">Clinically active ≥ 250 mg · Cognizin® = premium form</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ Cognizin® 500 mg</span><span class="ct-note">Double the minimum clinical dose</span></td>
+            <td><span class="ct-mid">~ Cognizin® 250 mg</span><span class="ct-note">Minimum clinical threshold</span></td>
+            <td><span class="ct-mid">~ 100 mg</span><span class="ct-note">Below clinical range</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">Bacopa Monnieri</span><span class="ct-crit-sub">Clinically active ≥ 300 mg · 45% Bacosides standardised</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ 320 mg · 55% Bacosides</span><span class="ct-note">Therapeutically dosed · above-average standardisation</span></td>
+            <td><span class="ct-mid">~ 150 mg</span><span class="ct-note">Below therapeutic threshold</span></td>
+            <td><span class="ct-yes">✓ 300 mg</span><span class="ct-note">Therapeutic range</span></td>
+            <td><span class="ct-mid">~ 100 mg</span><span class="ct-note">Below therapeutic threshold</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">DHA (omega-3)</span><span class="ct-crit-sub">Essential for cerebral membrane integrity</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ DHA ≥250 mg</span><span class="ct-note">Algal oil · vegan · EFSA brain claim</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">Creatine (cerebraal)</span><span class="ct-crit-sub">Brain ATP · most-supported stack ingredient</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ Creapure® 5 g</span><span class="ct-note">At full study dose</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+            <td><span class="ct-no">✕ Absent</span><span class="ct-note">Not in formulation</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">100% Transparent formula</span><span class="ct-crit-sub">All doses visible — no proprietary blends</span></td>
+            <td class="ct-col-us"><span class="ct-yes">✓ Fully transparent</span><span class="ct-note">Every mg visible and verifiable</span></td>
+            <td><span class="ct-yes">✓ Fully transparent</span><span class="ct-note">No proprietary blends</span></td>
+            <td><span class="ct-yes">✓ Fully transparent</span><span class="ct-note">No proprietary blends</span></td>
+            <td><span class="ct-no">✕ Proprietary blend</span><span class="ct-note">Doses not visible</span></td>
+          </tr>
+          <tr>
+            <td><span class="ct-crit">Total active compounds</span><span class="ct-crit-sub">Clinically dosed ingredients</span></td>
+            <td class="ct-col-us"><span class="ct-val-us">35</span><span class="ct-note">Fully dosed</span></td>
+            <td><span class="ct-val-neu">11</span><span class="ct-note">Fully dosed</span></td>
+            <td><span class="ct-val-neu">28</span><span class="ct-note">Partly underdosed</span></td>
+            <td><span class="ct-val-neu">13</span><span class="ct-note">Partly proprietary blend</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="compare-claim" style="text-align:center;margin-top:40px;">We publish every milligram. That's the entire comparison.</div>
+
+    <div class="ev-card rv" style="margin-top:56px;max-width:920px;margin-left:auto;margin-right:auto;">
+      <div class="ev-head">
+        <span class="ev-head-lbl">// EU-compliant by design</span>
+        <span class="ev-head-id">FACTUAL</span>
+      </div>
+      <div class="ev-body">
+        <p class="ev-sub">Why some popular nootropics can't enter the EU</p>
+        <p style="font-size:13px;font-weight:300;color:var(--t2);line-height:1.9;letter-spacing:.04em;">
+          Many well-known formulas come from the US, where different rules apply. Several popular nootropics contain ingredients that are not authorised as food supplements in the EU. We deliberately never used them.
+        </p>
+        <div class="ev-div"></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Alpha-GPC</strong> — no EU novel-food authorisation; classified as a medicine in several member states</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Huperzine A</strong> (from Huperzia serrata) — treated as a medicine in the EU, not permitted as a supplement</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Sabroxy®</strong> (Oroxylum indicum) — no demonstrable EU novel-food authorisation</span></div>
+        <div class="ev-div"></div>
+        <p class="ev-sub" style="margin-top:4px;">Where you'll find these, among others</p>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Qualia Mind</strong> — incl. Alpha-GPC, Huperzine A and Sabroxy®</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Alpha Brain</strong> — proprietary blend (doses not visible) + Huperzine A</span></div>
+        <div class="vr no"><div class="vi">✕</div><span class="vt"><strong style="color:var(--t2);font-weight:600;">Mind Lab Pro</strong> — contains a Maritime Pine form and doses partly below the clinical range</span></div>
+        <div class="ev-div"></div>
+        <div class="vr ok"><div class="vi">✓</div><span class="vt">Cogvivo is formulated entirely within EU novel-food law — every substance verifiable</span></div>
+        <p style="font-size:9px;color:var(--t4);letter-spacing:.05em;line-height:1.6;margin-top:8px;">
+          Based on publicly published product labels (as of 2026) and the EU novel-food catalogue. Always check the current label; formulas may change. Brand names are property of their respective owners. This is a factual comparison, not a medical claim.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMAIL OPT-IN -->
+<section class="optin sec" id="briefing">
+  <div class="optin-inner rv">
+    <p class="lbl tl" style="justify-content:center">// Waitlist</p>
+    <h2 class="optin-h">Be there<br><em>before the rest know.</em></h2>
+    <p class="optin-sub">The first batch is small and deliberately closed. Leave your email and you'll be the first to hear when Cogvivo opens — plus the scientific rationale per ingredient as soon as it's ready. No noise, only what matters.</p>
+    <div class="optin-form">
+      <input type="email" class="optin-input" placeholder="jouw@emailadres.nl">
+      <button class="optin-btn">▸ Add me to the waitlist</button>
+    </div>
+    <p class="optin-note">No newsletter · No spam · Launch updates only · Unsubscribe in one click</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header rv">
+      <p class="lbl tl" style="justify-content:center">// Before you decide</p>
+      <h2 class="faq-h">The questions that<br><em>matter.</em></h2>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">How quickly will I notice anything? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Some of it works acutely — you'll feel the focus and energy components (like caffeine with L-theanine) the same day. The real work is cumulative: Bacopa and the neuroplasticity ingredients build their effect over 8 to 12 weeks of daily use. If you want a pill that makes you a different person tomorrow, you're in the wrong place. This is infrastructure, not a kick.</p></div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">Is this safe to take daily? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Every substance is within EU-permitted doses and the whole is formulated within novel-food law. Still, no stack is for everyone: if you take medication — especially antidepressants (SSRIs/SNRIs) or blood thinners — are pregnant or breastfeeding, consult your doctor first. We'd rather be honest about that than pretend nothing ever interacts.</p></div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">Why is it more expensive than other nootropics? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Because it says what's in it, and what's in it works. Clinical doses of patented raw materials — Creapure®, Cognizin®, Synapsa®, Magtein® — cost many times the underdosed generic versions most brands use. You're not paying for a bigger label; you're paying for the amounts the studies are based on. Price the raw materials individually and you'll see.</p></div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">Can I combine it with coffee? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Yes. The caffeine sits in a separate component precisely so you control the dose. If you take the caffeine component, hold off on extra coffee until you know how you respond — the L-theanine takes the sharp edges off, but stacking on other caffeine sources isn't necessary. Want caffeine-free? Simply leave that component out.</p></div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">Is the formula fully transparent? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Completely. No proprietary blends, no hidden amounts. Every milligram is on the label and traces back to the study the dose rests on. That's deliberate: our entire reason for existing is that you can check it yourself instead of taking our word for it.</p></div>
+    </div>
+
+    <div class="faq-item rv">
+      <button class="faq-q">Why are there no disease claims or promises of a cure? <span class="faq-sign">+</span></button>
+      <div class="faq-a"><p>Because they're legally not allowed and because they aren't true. A food supplement cures nothing. We use only recognised EFSA claims and describe mechanisms as scientific background, not as a promise. A brand that promises you a miracle cure cannot, by definition, be trusted.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing sec" id="pricing">
+  <div class="pricing-inner">
+    <p class="lbl tl rv" style="justify-content:center">// Start Today</p>
+    <h2 class="price-h rv">Your<br><em>First Order.</em></h2>
+    <p class="price-sub rv">Cogvivo Protocol is available to Operators who take cognitive optimisation seriously. Order today — first delivery within 3–5 working days.</p>
+
+    <div class="exclusion-block rv">
+      <p>This protocol is <strong>not for everyone.</strong> It's for Operators — those who treat cognition seriously as an operational edge, not as supplementation. If price is your main consideration, this protocol is <em>not for you.</em> If you understand what you get in return, read on.</p>
+    </div>
+
+    <div class="anchor rv">
+      <span class="anchor-lbl">Buying the 35 branded ingredients separately — Magtein®, Niagen®, Creapure®, Synapsa® and the rest</span>
+      <span class="anchor-note">Costs many times more per month — and most of it never runs out</span>
+    </div>
+
+    <div class="scarcity rv">
+      <div class="sc-info">
+        <p class="sc-text">Pre-launch — deliberately small first batch<br>We open the waitlist per batch so production and quality hold up</p>
+      </div>
+      <div class="sc-num">
+        <span class="sc-count">01</span>
+        <span class="sc-lbl">first<br>batch</span>
+      </div>
+    </div>
+
+    <div class="price-card rv">
+      
+      <span class="pc-tag">Cogvivo Protocol — Full Stack</span>
+      <div class="pc-price"><sup>€</sup>199</div>
+      <p class="pc-period">Premium starter box · One-off · 30 days</p>
+      <ul class="pc-feats">
+        <li>35 clinically dosed ingredients — full formula</li>
+        <li>AM/PM circadian system · premium magnetic box</li>
+        <li>EU-compliant — all ingredients tested against EU law</li>
+        <li>100% transparent label — every mg visible</li>
+        <li>Scientific rationale per ingredient included</li>
+        <li>Free shipping within the Netherlands and Belgium</li>
+        <li>Direct access to the Operator network</li>
+      </ul>
+      <a href="#briefing" class="pc-cta">Reserve your place ▸</a>
+      <div style="text-align:center;">
+        <span class="guarantee-mini">Fully transparent label · Statutory 14-day withdrawal period under EU law</span>
+      </div>
+      <p class="pc-note">First delivery within 3–5 working days · One-off purchase — no subscription unless you opt for monthly delivery yourself</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final sec">
+  <div class="final-bg">COGVIVO</div>
+  <div class="final-inner">
+    <h2 class="final-h rv">
+      <span class="final-pre">Smart people</span>
+      <em>already know.</em>
+    </h2>
+    <p class="final-sub rv">The question isn't whether cognitive optimisation is possible. Science answered that long ago. The question is whether you take it seriously enough to do it — and whether you're early enough.</p>
+    <a href="#pricing" class="btn-main rv" style="display:inline-block;font-size:17px;padding:20px 60px;text-align:center;">
+      Start Today ▸
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">COGVIVO<em>.</em></div>
+  <p class="foot-copy">© 2026 Cogvivo — Amsterdam, Netherlands</p>
+  <ul class="foot-links">
+    <li><a href="#ingredients">// Formula</a></li>
+    <li><a href="#protocol">// Protocol</a></li>
+    <li><a href="#why">// Science</a></li>
+    <li><a href="voorwaarden_en.html">// Terms</a></li>
+    <li><a href="privacy_en.html">// Privacy</a></li>
+    <li><a href="disclaimer_en.html">// Disclaimer</a></li>
+    <li><a href="mailto:info@cogvivo.com">// Contact</a></li>
+  </ul>
+  <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.04);text-align:center;">
+    <p style="font-size:9px;letter-spacing:.12em;color:var(--t4);line-height:2.2;text-transform:uppercase;max-width:900px;margin:0 auto;">
+      Cogvivo — Registered with the Dutch Chamber of Commerce &nbsp;·&nbsp; Amsterdam, Netherlands<br>
+      This product is a food supplement and not a medicine &nbsp;·&nbsp; Not a substitute for a varied and balanced diet and a healthy lifestyle<br>
+      Do not exceed the recommended daily amount &nbsp;·&nbsp; Keep out of reach of children<br>
+      Consult a doctor if pregnant, breastfeeding or taking medication &nbsp;·&nbsp; Vegan · gluten-free · soy-free · Not suitable under 18<br>
+      Only recognised EFSA health claims are used, in accordance with Regulation (EC) No 1924/2006. This product does not diagnose, treat or cure any disease. Mechanisms mentioned are scientific background, not a health claim.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* CURSOR */
+const CD=document.getElementById('CUR'),CR=document.getElementById('CURR');
+let mx=-9999,my=-9999,rx=0,ry=0;
+addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;CD.style.left=mx+'px';CD.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;CR.style.left=rx+'px';CR.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('a,.go-card,.tc,.ic,.price-card,.ts,.ritual-step,.lex-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hl'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hl'));
+});
+
+/* NAV */
+addEventListener('scroll',()=>document.getElementById('NAV').classList.toggle('solid',scrollY>60));
+
+/* SCROLL REVEAL */
+const ro=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');ro.unobserve(x.target);}});
+},{threshold:.06,rootMargin:'0px 0px -10px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+/* EVIDENCE BARS */
+const bo=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.style.width=x.target.dataset.w+'%';bo.unobserve(x.target);}});
+},{threshold:.1});
+document.querySelectorAll('.ev-fill').forEach(b=>bo.observe(b));
+
+/* SCARCITY BAR */
+const sb=document.getElementById('SCBAR');
+if(sb){const so=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){setTimeout(()=>sb.style.width=sb.dataset.w+'%',400);so.unobserve(x.target);}});
+},{threshold:.2});so.observe(sb);}
+
+/* SCORE BARS */
+const scoreObs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){
+    x.target.querySelectorAll('.ct-score-bar').forEach(b=>b.style.width=b.dataset.w+'%');
+    scoreObs.unobserve(x.target);
+  }});
+},{threshold:.2});
+document.querySelectorAll('.ct-scores').forEach(el=>scoreObs.observe(el));
+
+/* OPT-IN FORM */
+const optinBtn=document.querySelector('.optin-btn');
+const optinInput=document.querySelector('.optin-input');
+/* ============================================================
+   WACHTLIJST / WAITLIST — e-mail koppeling
+   Vervang YOUR_FORM_ID hieronder door je eigen Formspree form-ID.
+   Stappen (2 min): 1) ga naar https://formspree.io  2) maak gratis account
+   3) maak een form aan met ontvanger info@cogvivo.com  4) kopieer het form-ID
+   (bv. 'xyzabcd') en zet het hieronder. Klaar — inzendingen komen dan
+   automatisch binnen op info@cogvivo.com.
+   ============================================================ */
+const FORM_ENDPOINT=(window.COGVIVO_FORM_ENDPOINT||"https://formspree.io/f/YOUR_FORM_ID");
+if(optinBtn&&optinInput){
+  optinBtn.addEventListener('click',async()=>{
+    const val=optinInput.value.trim();
+    if(!val||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val)){
+      optinInput.style.borderColor='rgba(200,80,80,.5)';
+      setTimeout(()=>optinInput.style.borderColor='',1500);
+      return;
+    }
+    const original=optinBtn.textContent;
+    optinBtn.disabled=true; optinBtn.textContent='…';
+    try{
+      const res=await fetch(FORM_ENDPOINT,{
+        method:'POST',
+        headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body:JSON.stringify({email:val,_subject:'Nieuwe wachtlijst-inschrijving Cogvivo'})
+      });
+      if(res.ok){
+        optinBtn.textContent='✓ You are on the list';
+        optinBtn.style.background='var(--goldhi)';
+        optinInput.value=''; optinInput.placeholder='You will be the first to hear from us';
+      }else{ throw new Error('bad status'); }
+    }catch(e){
+      optinBtn.disabled=false; optinBtn.textContent=original;
+      optinInput.style.borderColor='rgba(200,80,80,.5)';
+      optinInput.value=''; optinInput.placeholder='Something went wrong — please try again later';
+      setTimeout(()=>optinInput.style.borderColor='',2500);
+    }
+  });
+}
+
+/* FAQ ACCORDION */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  });
+});
+
+/* SCROLL PROGRESS */
+const _prog=document.getElementById('progress');
+addEventListener('scroll',()=>{
+  const st=document.documentElement.scrollTop||document.body.scrollTop;
+  const sh=(document.documentElement.scrollHeight||document.body.scrollHeight)-document.documentElement.clientHeight;
+  _prog.style.width=(sh>0?(st/sh)*100:0)+'%';
+},{passive:true});
+
+/* COUNT-UP on numeric stats (35, 14, 100%) — leaves AM·PM / EU untouched */
+function countUp(el){
+  const raw=el.textContent.trim();
+  const m=raw.match(/^(\d+)(%?)$/);
+  if(!m) return;
+  const target=parseInt(m[1],10), suffix=m[2];
+  const dur=1100, t0=performance.now();
+  function step(now){
+    const p=Math.min((now-t0)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    el.textContent=Math.round(eased*target)+suffix;
+    if(p<1) requestAnimationFrame(step);
+    else el.textContent=target+suffix;
+  }
+  requestAnimationFrame(step);
+}
+const _numObs=new IntersectionObserver(es=>{
+  es.forEach(x=>{if(x.isIntersecting){countUp(x.target);_numObs.unobserve(x.target);}});
+},{threshold:.4});
+document.querySelectorAll('.ts-val').forEach(el=>{ if(/^\d+%?$/.test(el.textContent.trim())) _numObs.observe(el); });
+
+/* MAGNETIC BUTTONS (desktop only) */
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.querySelectorAll('.btn-main,.nav-cta,.pc-cta').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      const mx=e.clientX-(r.left+r.width/2);
+      const my=e.clientY-(r.top+r.height/2);
+      btn.style.transform=`translate(${mx*0.18}px, ${my*0.28}px)`;
+    });
+    btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0,0)';});
+  });
+}
+
+/* LANGUAGE AUTO-DETECT (first visit only; respects manual choice) */
+(function(){
+  try{
+    var stored=localStorage.getItem('cogvivo_lang');
+    var here=(document.documentElement.lang||'nl');
+    if(stored){ /* user already chose: honour it if different */ 
+      if(stored!==here){ var map={nl:'index.html',en:'cogvivo_en.html',de:'cogvivo_de.html',fr:'cogvivo_fr.html'};
+        if(map[stored]&&!sessionStorage.getItem('cogvivo_redirected')){sessionStorage.setItem('cogvivo_redirected','1');location.replace(map[stored]);}
+      }
+      return;
+    }
+    if(sessionStorage.getItem('cogvivo_redirected'))return;
+    var nav=(navigator.language||'en').slice(0,2).toLowerCase();
+    var supported={en:'cogvivo_en.html',de:'cogvivo_de.html',fr:'cogvivo_fr.html',nl:'index.html'};
+    if(supported[nav]&&nav!==here){sessionStorage.setItem('cogvivo_redirected','1');location.replace(supported[nav]);}
+  }catch(e){}
+})();
+/* store choice when a language link is clicked */
+document.querySelectorAll('.langsel a').forEach(function(a){
+  a.addEventListener('click',function(){
+    var code=a.textContent.trim().toLowerCase();
+    try{localStorage.setItem('cogvivo_lang',code);}catch(e){}
+  });
+});
+</script>
+</body>
+</html>
