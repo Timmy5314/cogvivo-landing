@@ -86,8 +86,11 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(26,162,138,.5)}60%{opacity:.4;box-shadow:0 0 0 8px transparent}}
 .htb-sep{color:var(--t4);}
 
-.hero-crest-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:30px;opacity:0;animation:fadeUp .8s ease .05s forwards;}
-.hero-logo{width:min(360px,78vw);height:auto;filter:drop-shadow(0 10px 32px rgba(0,0,0,.6));}
+.hero-crest-wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;margin-bottom:30px;opacity:0;animation:fadeUp .8s ease .05s forwards;}
+.hero-crest-wrap::before{content:'';position:absolute;top:38%;left:50%;width:min(520px,96vw);height:min(300px,54vw);transform:translate(-50%,-50%);
+  background:radial-gradient(ellipse at center,rgba(36,188,168,.14) 0%,rgba(36,188,168,.05) 40%,transparent 70%);
+  filter:blur(6px);z-index:-1;pointer-events:none;}
+.hero-logo{width:min(360px,78vw);height:auto;filter:drop-shadow(0 10px 34px rgba(0,0,0,.6));}
 .logo-wordmark{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,8vw,84px);font-weight:700;letter-spacing:.14em;color:var(--t1);line-height:1;}
 .logo-wordmark span{color:var(--tealhi);}
 .hero-crest-tag{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.5em;text-transform:uppercase;color:var(--goldhi);padding-left:.5em;}
@@ -514,9 +517,7 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
   <div class="brk bl"></div><div class="brk br"></div>
 
   <div class="hero-crest-wrap">
-    <img class="hero-logo" src="cogvivo-logo.webp" alt="Cogvivo" width="380" height="249"
-         onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='block';">
-    <div id="logo-fallback" class="logo-wordmark" style="display:none;">COGVIVO<span>.</span></div>
+    <img class="hero-logo" src="cogvivo-crest.webp" alt="Cogvivo" width="1483" height="956">
     <span class="hero-crest-tag">Elite Combat Pro</span>
   </div>
 
