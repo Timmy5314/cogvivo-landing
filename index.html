@@ -1342,7 +1342,7 @@ if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
   var magState=magBtns.map(function(){return {x:0,y:0,tx:0,ty:0};});
   var magMX=-99999,magMY=-99999;
   addEventListener('mousemove',function(e){magMX=e.clientX;magMY=e.clientY;},{passive:true});
-  var MAG_RADIUS=150, MAG_PULL=0.42;
+  var MAG_RADIUS=320, MAG_PULL=0.5;
   function magFrame(){
     for(var i=0;i<magBtns.length;i++){
       var b=magBtns[i], s=magState[i], r=b.getBoundingClientRect();
