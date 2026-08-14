@@ -307,7 +307,7 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .tc-tag{font-size:7px;letter-spacing:.28em;color:#7a9eb0;text-transform:uppercase;margin-bottom:16px;}
 .tc-stars{display:flex;gap:3px;margin-bottom:18px;}
 .star{color:var(--goldhi);font-size:11px;}
-.tc-q{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;font-style:italic;color:#e8e4dc;line-height:1.9;margin-bottom:32px;position:relative;z-index:1;}
+.tc-q{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;font-style:normal;color:#f2efe8;line-height:2.05;letter-spacing:.012em;margin-bottom:32px;position:relative;z-index:1;}
 .tc-q::before{content:'\201C';font-family:'Cormorant Garamond',serif;font-size:150px;color:rgba(200,164,72,.04);position:absolute;top:-24px;left:-12px;line-height:1;pointer-events:none;}
 .tc-name{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--t1);}
 .tc-role{font-size:7px;letter-spacing:.16em;color:var(--goldhi);margin-top:4px;}
@@ -483,62 +483,58 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 .langsel a:hover{color:var(--tealhi);}
 .langsel a.active{color:var(--tealhi);border-color:rgba(26,162,138,.4);}
 @media(max-width:1024px){.langsel{margin-left:auto;}}
-/* ============================================================
-   VISUELE VERFIJNING  Â·  neuro-esthetiek
-   Afgeronde hoeken (het brein leest ronde vormen onbewust als
-   veiliger/vriendelijker â€” Bar & Neta 2006), meer diepte en
-   rustige micro-interactie voor hogere waargenomen kwaliteit.
-   De hoekige CTA-vorm blijft bewust behouden als EEN merk-accent.
-   ============================================================ */
+/* =====================================================
+   VISUELE VERFIJNING - neuro-esthetiek
+   Afgeronde hoeken lezen onbewust als veiliger/rustiger
+   (Bar & Neta 2006); RUSTIGE, niet-verspringende hover
+   voor hogere waargenomen kwaliteit. De hoekige CTA-vorm
+   blijft bewust behouden als 1 merk-accent.
+   ===================================================== */
 :root{--rad:12px;--rad-sm:8px;--ease:cubic-bezier(.16,1,.3,1);}
 
-/* zachtere hoeken op inhoud & panelen */
+/* zachtere hoeken op inhoud en panelen */
 .ev-card,.go-card,.stop-card,.ic,.ritual-step,.lex-item,.tc,
 .ct-score,.why-table,.anchor,.scarcity,.enemy-bar,.guarantee,
 .exclusion-block,.ritual-doctrine,.optin-form,.hero-guar,
 .guarantee-mini,.go-badge,.stop-badge,.pc-tag,.tc-tag{border-radius:var(--rad);}
 .why-table,.ev-card,.optin-form,.ic{overflow:hidden;}
-
-/* chamfer -> zachte ronding op inhoudspanelen (CTA blijft hoekig) */
 .exclusion-block,.ritual-doctrine,.guarantee{clip-path:none;border-radius:var(--rad);}
-
-/* pill-vormige chips & badges */
 .go-badge,.stop-badge,.pc-tag,.hero-guar,.guarantee-mini,.tc-tag{border-radius:999px;}
 
-/* diepte + zachte lift bij hover (perceived quality) */
+/* RUSTIGE hover: alleen gloed/kleur, GEEN verschuiving -> geen geflikker */
 .ic,.lex-item,.ritual-step,.tc,.go-card,.stop-card{
-  transition:transform .5s var(--ease),background .4s var(--ease),
-             box-shadow .5s var(--ease),border-color .4s var(--ease),
-             border-top-color .4s var(--ease),border-left-color .4s var(--ease);
+  transition:background .35s ease,box-shadow .35s ease,border-color .35s ease,
+             border-top-color .35s ease,border-left-color .35s ease;
 }
 .ic:hover,.lex-item:hover,.ritual-step:hover,.tc:hover,.go-card:hover,.stop-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 44px -20px rgba(0,0,0,.75),0 0 0 1px rgba(36,188,168,.12);
+  transform:none;
+  box-shadow:0 0 0 1px rgba(36,188,168,.16) inset,0 14px 34px -22px rgba(0,0,0,.65);
 }
 
 /* resting-diepte op sleutelpanelen */
-.price-card,.guarantee,.ev-card,.why-table{
-  box-shadow:0 24px 60px -30px rgba(0,0,0,.8);
-}
+.price-card,.guarantee,.ev-card,.why-table{box-shadow:0 24px 60px -30px rgba(0,0,0,.8);}
 
-/* zwevende hero-krans + ademende gloed */
-.hero-logo{animation:crestFloat 7.5s ease-in-out infinite;will-change:transform;}
-@keyframes crestFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-.hero-crest-wrap::before{animation:crestGlow 7.5s ease-in-out infinite;}
-@keyframes crestGlow{0%,100%{opacity:.7}50%{opacity:1}}
+/* magnetische knoppen worden per frame door JS gestuurd:
+   geen CSS-transitie op transform, anders loopt hij achter (houterig) */
+.btn-main,.nav-cta,.pc-cta{transition:background .3s,color .3s,box-shadow .3s;will-change:transform;}
 
-/* premium sheen over de prijskaart (focal point) */
+/* kalme zwevende hero-krans + ademende gloed */
+.hero-logo{animation:crestFloat 8s ease-in-out infinite;will-change:transform;}
+@keyframes crestFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-crest-wrap::before{animation:crestGlow 8s ease-in-out infinite;}
+@keyframes crestGlow{0%,100%{opacity:.72}50%{opacity:1}}
+
+/* subtiele sheen over de prijskaart */
 .price-card>*{position:relative;z-index:1;}
 .price-card::after{content:'';position:absolute;top:0;left:-70%;width:45%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(36,188,168,.10),transparent);
-  transform:skewX(-18deg);animation:sheen 7s ease-in-out 2.5s infinite;pointer-events:none;z-index:0;}
-@keyframes sheen{0%{left:-70%}22%,100%{left:140%}}
+  background:linear-gradient(100deg,transparent,rgba(36,188,168,.09),transparent);
+  transform:skewX(-18deg);animation:sheen 9s ease-in-out 3s infinite;pointer-events:none;z-index:0;}
+@keyframes sheen{0%{left:-70%}20%,100%{left:150%}}
 
-/* nette focus-states (toegankelijkheid + vertrouwen) */
+/* nette focus-states */
 a:focus-visible,button:focus-visible,.optin-input:focus-visible{
   outline:2px solid var(--tealhi);outline-offset:3px;border-radius:4px;}
 
-/* rustige beweging respecteren */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
   .hero-logo{animation:none;}
@@ -1336,17 +1332,29 @@ const _numObs=new IntersectionObserver(es=>{
 },{threshold:.4});
 document.querySelectorAll('.ts-val').forEach(el=>{ if(/^\d+%?$/.test(el.textContent.trim())) _numObs.observe(el); });
 
-/* MAGNETIC BUTTONS (desktop only) */
+/* MAGNETIC BUTTONS - proximity: reageert al van veraf (alleen desktop) */
 if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-  document.querySelectorAll('.btn-main,.nav-cta,.pc-cta').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-      const r=btn.getBoundingClientRect();
-      const mx=e.clientX-(r.left+r.width/2);
-      const my=e.clientY-(r.top+r.height/2);
-      btn.style.transform=`translate(${mx*0.18}px, ${my*0.28}px)`;
-    });
-    btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0,0)';});
-  });
+  var magBtns=Array.prototype.slice.call(document.querySelectorAll('.btn-main,.nav-cta,.pc-cta'));
+  var magState=magBtns.map(function(){return {x:0,y:0,tx:0,ty:0};});
+  var magMX=-99999,magMY=-99999;
+  addEventListener('mousemove',function(e){magMX=e.clientX;magMY=e.clientY;},{passive:true});
+  var MAG_RADIUS=150, MAG_PULL=0.42;
+  function magFrame(){
+    for(var i=0;i<magBtns.length;i++){
+      var b=magBtns[i], s=magState[i], r=b.getBoundingClientRect();
+      var cx=r.left+r.width/2, cy=r.top+r.height/2;
+      var dx=magMX-cx, dy=magMY-cy;
+      var dist=Math.sqrt(dx*dx+dy*dy);
+      var reach=MAG_RADIUS+Math.max(r.width,r.height)/2;
+      if(dist<reach){ var f=1-dist/reach; s.tx=dx*MAG_PULL*f; s.ty=dy*MAG_PULL*f; }
+      else { s.tx=0; s.ty=0; }
+      s.x+=(s.tx-s.x)*0.16; s.y+=(s.ty-s.y)*0.16;
+      if(s.tx===0&&s.ty===0&&Math.abs(s.x)<0.06&&Math.abs(s.y)<0.06){ if(b.style.transform){b.style.transform='';} }
+      else { b.style.transform='translate('+s.x.toFixed(2)+'px,'+s.y.toFixed(2)+'px)'; }
+    }
+    requestAnimationFrame(magFrame);
+  }
+  requestAnimationFrame(magFrame);
 }
 
 /* LANGUAGE AUTO-DETECT (first visit only; respects manual choice) */
@@ -1373,33 +1381,6 @@ document.querySelectorAll('.langsel a').forEach(function(a){
     try{localStorage.setItem('cogvivo_lang',code);}catch(e){}
   });
 });
-</script>
-<script>
-/* GESTAGGERDE KAART-REVEAL â€” kaarten komen een voor een binnen */
-(function(){
-  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  var groups=document.querySelectorAll('.ing-grid,.ritual-grid,.lex-grid,.tc-grid,.stop-grid,.go-stack,.ct-scores');
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(x){
-      if(!x.isIntersecting) return;
-      var kids=Array.prototype.slice.call(x.target.children);
-      kids.forEach(function(k,i){
-        if(k.dataset.noStagger) return;
-        k.style.transition='opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)';
-        k.style.transitionDelay=(i*65)+'ms';
-        requestAnimationFrame(function(){k.style.opacity='1';k.style.transform='none';});
-      });
-      io.unobserve(x.target);
-    });
-  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  groups.forEach(function(g){
-    Array.prototype.slice.call(g.children).forEach(function(k){
-      if(k.tagName==='P'){k.dataset.noStagger='1';return;}
-      k.style.opacity='0';k.style.transform='translateY(22px)';
-    });
-    io.observe(g);
-  });
-})();
 </script>
 </body>
 </html>
