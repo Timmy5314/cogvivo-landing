@@ -505,8 +505,8 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 
 /* RUSTIGE hover: alleen gloed/kleur, GEEN verschuiving -> geen geflikker */
 .ic,.lex-item,.ritual-step,.tc,.go-card,.stop-card{
-  transition:background .35s ease,box-shadow .35s ease,border-color .35s ease,
-             border-top-color .35s ease,border-left-color .35s ease;
+  transition:background .8s ease-in-out,box-shadow .8s ease-in-out,border-color .8s ease-in-out,
+             border-top-color .8s ease-in-out,border-left-color .8s ease-in-out;
 }
 .ic:hover,.lex-item:hover,.ritual-step:hover,.tc:hover,.go-card:hover,.stop-card:hover{
   transform:none;
@@ -536,6 +536,11 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 /* nette focus-states */
 a:focus-visible,button:focus-visible,.optin-input:focus-visible{
   outline:2px solid var(--tealhi);outline-offset:3px;border-radius:4px;}
+
+/* traag en soepel over ALLES wat je aanwijst (fijn, langzaam gevoel) */
+.nav-links a,.btn-main,.nav-cta,.pc-cta,.btn-alt,.faq-q,.foot-links a,
+.wt-row,.langsel a,.lex-term,.tc-tag,.ct-table tr,.optin-input,.ic::before,
+.go-arr,.ct-score-name,.faq-q:hover,.ev-card{transition-duration:.8s !important;transition-timing-function:ease-in-out !important;}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
