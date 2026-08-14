@@ -33,6 +33,8 @@ html{scroll-behavior:smooth;}
   --goldhi:#e0c06e;
   --teal:#1aa28a;
   --tealhi:#24bca8;
+  --iris:#6f6ab0;
+  --irishi:#9d97e6;
 }
 
 body{
@@ -221,10 +223,10 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .ing-h em{font-style:italic;color:var(--goldhi);}
 .ing-body{font-size:14px;font-weight:300;color:var(--t2);line-height:2;letter-spacing:.04em;}
 .tier{margin-bottom:36px;}
-.tier-bar{display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;border-left:3px solid;}
+.tier-bar{display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;border-left:3px solid;border-radius:0 var(--rad-sm) var(--rad-sm) 0;}
 .t1 .tier-bar{border-left-color:var(--goldhi);background:rgba(200,164,72,.04);}
 .t2 .tier-bar{border-left-color:var(--teal);background:rgba(26,162,138,.03);}
-.t-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid;font-family:'DM Mono',monospace;}
+.t-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid;font-family:'DM Mono',monospace;border-radius:999px;}
 .t1 .t-badge{color:var(--goldhi);border-color:rgba(200,164,72,.35);}
 .t2 .t-badge{color:var(--tealhi);border-color:rgba(26,162,138,.28);}
 .t-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
@@ -245,11 +247,11 @@ nav.solid{background:rgba(2,4,8,.97);border-bottom:1px solid rgba(26,162,138,.1)
 .t1 .ev-fill{background:linear-gradient(90deg,rgba(200,164,72,.5),var(--goldhi));}
 .t2 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.5),var(--tealhi));}
 .ev-pct{font-size:9px;color:#bccbd8;}
-.tier3-bar{border-left:3px solid rgba(26,162,138,.2);background:rgba(26,162,138,.02);display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;}
-.tier3-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(255,255,255,.1);color:var(--t3);font-family:'DM Mono',monospace;}
-.tier3-desc{font-size:8px;letter-spacing:.15em;color:#7a9aaa;text-transform:uppercase;}
-.tier3 .ic::before{background:rgba(26,162,138,.3);}
-.tier3 .ev-fill{background:linear-gradient(90deg,rgba(26,162,138,.3),rgba(26,162,138,.6));}
+.tier3-bar{border-left:3px solid var(--iris);background:rgba(111,106,176,.06);display:flex;align-items:center;gap:14px;padding:11px 18px;margin-bottom:12px;border-radius:0 var(--rad-sm) var(--rad-sm) 0;}
+.tier3-badge{font-size:7px;letter-spacing:.25em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(157,151,230,.34);color:var(--irishi);font-family:'DM Mono',monospace;border-radius:999px;}
+.tier3-desc{font-size:8px;letter-spacing:.15em;color:#9a94c4;text-transform:uppercase;}
+.tier3 .ic::before{background:var(--irishi);}
+.tier3 .ev-fill{background:linear-gradient(90deg,rgba(111,106,176,.5),var(--irishi));}
 
 /* PROTOCOL / RITUAL */
 .ritual{padding:140px 60px;background:var(--mid);}
@@ -483,6 +485,66 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 .langsel a:hover{color:var(--tealhi);}
 .langsel a.active{color:var(--tealhi);border-color:rgba(26,162,138,.4);}
 @media(max-width:1024px){.langsel{margin-left:auto;}}
+/* ============================================================
+   VISUELE VERFIJNING  Â·  neuro-esthetiek
+   Afgeronde hoeken (het brein leest ronde vormen onbewust als
+   veiliger/vriendelijker â€” Bar & Neta 2006), meer diepte en
+   rustige micro-interactie voor hogere waargenomen kwaliteit.
+   De hoekige CTA-vorm blijft bewust behouden als EEN merk-accent.
+   ============================================================ */
+:root{--rad:12px;--rad-sm:8px;--ease:cubic-bezier(.16,1,.3,1);}
+
+/* zachtere hoeken op inhoud & panelen */
+.ev-card,.go-card,.stop-card,.ic,.ritual-step,.lex-item,.tc,
+.ct-score,.why-table,.anchor,.scarcity,.enemy-bar,.guarantee,
+.exclusion-block,.ritual-doctrine,.optin-form,.hero-guar,
+.guarantee-mini,.go-badge,.stop-badge,.pc-tag,.tc-tag{border-radius:var(--rad);}
+.why-table,.ev-card,.optin-form,.ic{overflow:hidden;}
+
+/* chamfer -> zachte ronding op inhoudspanelen (CTA blijft hoekig) */
+.exclusion-block,.ritual-doctrine,.guarantee{clip-path:none;border-radius:var(--rad);}
+
+/* pill-vormige chips & badges */
+.go-badge,.stop-badge,.pc-tag,.hero-guar,.guarantee-mini,.tc-tag{border-radius:999px;}
+
+/* diepte + zachte lift bij hover (perceived quality) */
+.ic,.lex-item,.ritual-step,.tc,.go-card,.stop-card{
+  transition:transform .5s var(--ease),background .4s var(--ease),
+             box-shadow .5s var(--ease),border-color .4s var(--ease),
+             border-top-color .4s var(--ease),border-left-color .4s var(--ease);
+}
+.ic:hover,.lex-item:hover,.ritual-step:hover,.tc:hover,.go-card:hover,.stop-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 44px -20px rgba(0,0,0,.75),0 0 0 1px rgba(36,188,168,.12);
+}
+
+/* resting-diepte op sleutelpanelen */
+.price-card,.guarantee,.ev-card,.why-table{
+  box-shadow:0 24px 60px -30px rgba(0,0,0,.8);
+}
+
+/* zwevende hero-krans + ademende gloed */
+.hero-logo{animation:crestFloat 7.5s ease-in-out infinite;will-change:transform;}
+@keyframes crestFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-crest-wrap::before{animation:crestGlow 7.5s ease-in-out infinite;}
+@keyframes crestGlow{0%,100%{opacity:.7}50%{opacity:1}}
+
+/* premium sheen over de prijskaart (focal point) */
+.price-card>*{position:relative;z-index:1;}
+.price-card::after{content:'';position:absolute;top:0;left:-70%;width:45%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(36,188,168,.10),transparent);
+  transform:skewX(-18deg);animation:sheen 7s ease-in-out 2.5s infinite;pointer-events:none;z-index:0;}
+@keyframes sheen{0%{left:-70%}22%,100%{left:140%}}
+
+/* nette focus-states (toegankelijkheid + vertrouwen) */
+a:focus-visible,button:focus-visible,.optin-input:focus-visible{
+  outline:2px solid var(--tealhi);outline-offset:3px;border-radius:4px;}
+
+/* rustige beweging respecteren */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+  .hero-logo{animation:none;}
+}
 </style>
 <link rel="alternate" hreflang="nl" href="index.html">
 <link rel="alternate" hreflang="en" href="cogvivo_en.html">
@@ -1315,6 +1377,33 @@ document.querySelectorAll('.langsel a').forEach(function(a){
     try{localStorage.setItem('cogvivo_lang',code);}catch(e){}
   });
 });
+</script>
+<script>
+/* GESTAGGERDE KAART-REVEAL â€” kaarten komen een voor een binnen */
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var groups=document.querySelectorAll('.ing-grid,.ritual-grid,.lex-grid,.tc-grid,.stop-grid,.go-stack,.ct-scores');
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(x){
+      if(!x.isIntersecting) return;
+      var kids=Array.prototype.slice.call(x.target.children);
+      kids.forEach(function(k,i){
+        if(k.dataset.noStagger) return;
+        k.style.transition='opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1)';
+        k.style.transitionDelay=(i*65)+'ms';
+        requestAnimationFrame(function(){k.style.opacity='1';k.style.transform='none';});
+      });
+      io.unobserve(x.target);
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  groups.forEach(function(g){
+    Array.prototype.slice.call(g.children).forEach(function(k){
+      if(k.tagName==='P'){k.dataset.noStagger='1';return;}
+      k.style.opacity='0';k.style.transform='translateY(22px)';
+    });
+    io.observe(g);
+  });
+})();
 </script>
 </body>
 </html>
