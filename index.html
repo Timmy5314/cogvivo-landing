@@ -486,10 +486,12 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 .langsel a.active{color:var(--tealhi);border-color:rgba(26,162,138,.4);}
 @media(max-width:1024px){.langsel{margin-left:auto;}}
 /* =====================================================
-   VISUELE VORM - alleen afgeronde hoeken, geen animatie
-   (bewegende hovers/effecten verwijderd voor soepelheid)
+   SOEPELE, RUSTIGE BEWEGING
+   Afgeronde hoeken + zachte TRAGE hover (schaal, geen
+   verspringing -> geen geflikker). GPU-vriendelijk,
+   geen oneindige achtergrond-animaties (soepel scrollen).
    ===================================================== */
-:root{--rad:12px;--rad-sm:8px;}
+:root{--rad:12px;--rad-sm:8px;--soft:cubic-bezier(.22,.61,.36,1);}
 
 /* zachtere hoeken op inhoud en panelen */
 .ev-card,.go-card,.stop-card,.ic,.ritual-step,.lex-item,.tc,
@@ -499,6 +501,21 @@ footer{background:var(--black);border-top:1px solid rgba(26,162,138,.08);padding
 .why-table,.ev-card,.optin-form,.ic{overflow:hidden;}
 .exclusion-block,.ritual-doctrine,.guarantee{clip-path:none;border-radius:var(--rad);}
 .go-badge,.stop-badge,.pc-tag,.hero-guar,.guarantee-mini,.tc-tag{border-radius:999px;}
+
+/* SOEPELE, trage hover: zachte schaal + gloed. Cursor blijft op de kaart
+   (schaal groeit onder de muis) -> geen geflikker/jank. */
+.ic,.lex-item,.ritual-step,.tc,.go-card,.stop-card{
+  transition:transform .55s var(--soft),box-shadow .55s var(--soft),background .55s var(--soft);
+}
+.ic:hover,.lex-item:hover,.ritual-step:hover,.tc:hover,.go-card:hover,.stop-card:hover{
+  transform:scale(1.02);
+  box-shadow:0 18px 40px -22px rgba(0,0,0,.6);
+  position:relative;z-index:2;
+}
+
+/* knop: soepele, iets tragere kleur-overgang; transform komt van de JS-magneet
+   (dus GEEN transform in de transitie, anders loopt hij achter/houterig) */
+.btn-main,.nav-cta,.pc-cta{transition:background .45s var(--soft),color .45s var(--soft),box-shadow .45s var(--soft);will-change:transform;}
 
 /* nette focus-states (toegankelijkheid) */
 a:focus-visible,button:focus-visible,.optin-input:focus-visible{
@@ -1298,17 +1315,26 @@ const _numObs=new IntersectionObserver(es=>{
 },{threshold:.4});
 document.querySelectorAll('.ts-val').forEach(el=>{ if(/^\d+%?$/.test(el.textContent.trim())) _numObs.observe(el); });
 
-/* MAGNETIC BUTTONS (desktop only) */
+/* MAGNETIC BUTTONS (desktop only) - zachte proximity: reageert kalm als de muis in de buurt is */
 if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-  document.querySelectorAll('.btn-main,.nav-cta,.pc-cta').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-      const r=btn.getBoundingClientRect();
-      const mx=e.clientX-(r.left+r.width/2);
-      const my=e.clientY-(r.top+r.height/2);
-      btn.style.transform=`translate(${mx*0.18}px, ${my*0.28}px)`;
-    });
-    btn.addEventListener('mouseleave',()=>{btn.style.transform='translate(0,0)';});
-  });
+  var magBtns=Array.prototype.slice.call(document.querySelectorAll('.btn-main,.nav-cta,.pc-cta'));
+  var magSt=magBtns.map(function(){return {x:0,y:0,tx:0,ty:0};});
+  var mX=-99999,mY=-99999;
+  addEventListener('mousemove',function(e){mX=e.clientX;mY=e.clientY;},{passive:true});
+  var R=180, PULL=0.32, EASE=0.10;
+  function magLoop(){
+    for(var i=0;i<magBtns.length;i++){
+      var b=magBtns[i], s=magSt[i], r=b.getBoundingClientRect();
+      var cx=r.left+r.width/2, cy=r.top+r.height/2, dx=mX-cx, dy=mY-cy;
+      var dist=Math.sqrt(dx*dx+dy*dy), reach=R+Math.max(r.width,r.height)/2;
+      if(dist<reach){ var f=1-dist/reach; s.tx=dx*PULL*f; s.ty=dy*PULL*f; } else { s.tx=0; s.ty=0; }
+      s.x+=(s.tx-s.x)*EASE; s.y+=(s.ty-s.y)*EASE;
+      if(s.tx===0&&s.ty===0&&Math.abs(s.x)<0.05&&Math.abs(s.y)<0.05){ if(b.style.transform){b.style.transform='';} }
+      else { b.style.transform='translate('+s.x.toFixed(2)+'px,'+s.y.toFixed(2)+'px)'; }
+    }
+    requestAnimationFrame(magLoop);
+  }
+  requestAnimationFrame(magLoop);
 }
 
 /* LANGUAGE AUTO-DETECT (first visit only; respects manual choice) */
